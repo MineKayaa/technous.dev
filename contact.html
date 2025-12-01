@@ -36,25 +36,26 @@
     <div class="contact-grid">
       <article class="card form-card scale-in stagger-1">
         <h3>Project inquiry</h3>
-        <form>
+        <form id="contact-form">
           <label>
             <span>Full name</span>
-            <input class="input" type="text" name="name" placeholder="Alex Anderson" required>
+            <input class="input" type="text" name="name" id="name" placeholder="Alex Anderson" required>
           </label>
           <label>
             <span>Work email</span>
-            <input class="input" type="email" name="email" placeholder="alex@company.com" required>
+            <input class="input" type="email" name="email" id="email" placeholder="alex@company.com" required>
           </label>
           <label>
             <span>Company</span>
-            <input class="input" type="text" name="company" placeholder="Company name">
+            <input class="input" type="text" name="company" id="company" placeholder="Company name">
           </label>
           <label>
             <span>How can we help?</span>
-            <textarea class="input" name="message"
+            <textarea class="input" name="message" id="message"
               placeholder="Product build, platform modernization, or team augmentation details"></textarea>
           </label>
           <button class="button primary" type="submit">Send message</button>
+          <div id="form-status" style="margin-top: 1rem; display: none;"></div>
         </form>
       </article>
 
@@ -92,6 +93,42 @@
   </footer>
 
   <script>
+    // Form submission handler - sends email via mailto
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+      event.preventDefault();
+      
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const company = document.getElementById('company').value;
+      const message = document.getElementById('message').value;
+      
+      // Build email subject and body
+      const subject = encodeURIComponent('New Contact Form Submission from ' + name);
+      const body = encodeURIComponent(
+        'Name: ' + name + '\n' +
+        'Email: ' + email + '\n' +
+        'Company: ' + (company || 'Not provided') + '\n\n' +
+        'Message:\n' + message
+      );
+      
+      // Create mailto link
+      const mailtoLink = 'mailto:hello@technous.dev?subject=' + subject + '&body=' + body;
+      
+      // Open email client
+      window.location.href = mailtoLink;
+      
+      // Show success message
+      const statusDiv = document.getElementById('form-status');
+      statusDiv.style.display = 'block';
+      statusDiv.style.color = '#10b981';
+      statusDiv.textContent = 'Opening your email client... If it doesn\'t open, please email us directly at hello@technous.dev';
+      
+      // Reset form after a short delay
+      setTimeout(function() {
+        document.getElementById('contact-form').reset();
+      }, 1000);
+    });
+
     document.getElementById('year').textContent = new Date().getFullYear();
 
     // Scroll Animations
