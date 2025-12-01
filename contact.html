@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,12 +10,13 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
-<body class="background-blobs">
+
+<body class="">
   <nav>
     <div class="nav-container">
-      <a class="logo" href="/">
+      <a class="logo" href="index.html">
         <span class="logo-mark">T</span>
-        Technous LTD
+        Technous
       </a>
       <ul>
         <li><a href="index.html#services">Services</a></li>
@@ -25,18 +27,19 @@
     </div>
   </nav>
 
-  <main class="section">
+  <main class="section fade-in">
     <div class="badge">Get in touch</div>
     <h1>Let’s talk about your next release</h1>
-    <p class="muted">Share your goals, timeline, and the challenges you want to solve. We’ll respond within one business day.</p>
+    <p class="muted">Share your goals, timeline, and the challenges you want to solve. We’ll respond within one business
+      day.</p>
 
     <div class="contact-grid">
-      <article class="card form-card">
+      <article class="card form-card scale-in stagger-1">
         <h3>Project inquiry</h3>
         <form>
           <label>
             <span>Full name</span>
-            <input class="input" type="text" name="name" placeholder="Alex Rivera" required>
+            <input class="input" type="text" name="name" placeholder="Alex Anderson" required>
           </label>
           <label>
             <span>Work email</span>
@@ -48,19 +51,26 @@
           </label>
           <label>
             <span>How can we help?</span>
-            <textarea class="input" name="message" placeholder="Product build, platform modernization, or team augmentation details"></textarea>
+            <textarea class="input" name="message"
+              placeholder="Product build, platform modernization, or team augmentation details"></textarea>
           </label>
           <button class="button primary" type="submit">Send message</button>
         </form>
       </article>
 
-      <article class="card">
+      <article class="card scale-in stagger-2">
         <h3>Quick details</h3>
         <p class="muted">Prefer to email us directly? Reach out and we’ll route your note to the right product lead.</p>
         <div class="pill-group">
-          <span class="pill">📧 hello@technous.dev</span>
-          <span class="pill">📍 Remote-first, GMT core hours</span>
-          <span class="pill">🗓️ Response within 1 business day</span>
+          <span class="pill"><img src="assets/icons/mail.svg" alt="mail" width="16" height="16">
+            hello@technous.dev</span>
+          <span class="pill"><img src="assets/icons/mobile-signal.svg" width="16" height="16" alt="mobile-signal icon"
+              width="16" height="16">
+            Remote-first, GMT core hours</span>
+          <span class="pill"><img src="assets/icons/arrow-rotate-right-24.svg" width="16" height="16" alt="24 icon"
+              width="16" height="16">
+            Response within 1
+            business day</span>
         </div>
         <h4>What to include</h4>
         <ul>
@@ -74,7 +84,7 @@
 
   <footer>
     <div>© <span id="year"></span> Technous LTD. Crafted with care.</div>
-    <div class="pill-group" style="margin-top: 8px;">
+    <div class="pill-group">
       <a class="pill" href="privacy.html">Privacy Policy</a>
       <a class="pill" href="terms.html">Terms & Conditions</a>
       <a class="pill" href="index.html">Home</a>
@@ -83,6 +93,60 @@
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Scroll Animations
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.fade-in, .scale-in').forEach(el => {
+      observer.observe(el);
+    });
+
+    // Navbar Scroll Effect
+    const nav = document.querySelector('nav');
+    let lastScroll = 0;
+    let ticking = false;
+
+    function updateNavbar() {
+      const currentScroll = window.pageYOffset;
+      if (currentScroll > 50) {
+        nav.classList.add('scrolled');
+      } else {
+        nav.classList.remove('scrolled');
+      }
+      lastScroll = currentScroll;
+      ticking = false;
+    }
+
+    window.addEventListener('scroll', () => {
+      if (!ticking) {
+        window.requestAnimationFrame(updateNavbar);
+        ticking = true;
+      }
+    });
+
+    // Mouse Tracking for Cards
+    const cards = document.querySelectorAll('.card');
+    cards.forEach(card => {
+      card.addEventListener('mousemove', (e) => {
+        const rect = card.getBoundingClientRect();
+        const x = ((e.clientX - rect.left) / rect.width) * 100;
+        const y = ((e.clientY - rect.top) / rect.height) * 100;
+        card.style.setProperty('--mouse-x', `${x}%`);
+        card.style.setProperty('--mouse-y', `${y}%`);
+      });
+    });
   </script>
 </body>
+
 </html>
