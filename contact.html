@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Technous LTD</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="background-blobs">
+  <nav>
+    <div class="nav-container">
+      <a class="logo" href="/">
+        <span class="logo-mark">T</span>
+        Technous LTD
+      </a>
+      <ul>
+        <li><a href="index.html#services">Services</a></li>
+        <li><a href="index.html#process">Approach</a></li>
+        <li><a href="index.html#industries">Industries</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="section">
+    <div class="badge">Get in touch</div>
+    <h1>Let’s talk about your next release</h1>
+    <p class="muted">Share your goals, timeline, and the challenges you want to solve. We’ll respond within one business day.</p>
+
+    <div class="contact-grid">
+      <article class="card form-card">
+        <h3>Project inquiry</h3>
+        <form>
+          <label>
+            <span>Full name</span>
+            <input class="input" type="text" name="name" placeholder="Alex Rivera" required>
+          </label>
+          <label>
+            <span>Work email</span>
+            <input class="input" type="email" name="email" placeholder="alex@company.com" required>
+          </label>
+          <label>
+            <span>Company</span>
+            <input class="input" type="text" name="company" placeholder="Company name">
+          </label>
+          <label>
+            <span>How can we help?</span>
+            <textarea class="input" name="message" placeholder="Product build, platform modernization, or team augmentation details"></textarea>
+          </label>
+          <button class="button primary" type="submit">Send message</button>
+        </form>
+      </article>
+
+      <article class="card">
+        <h3>Quick details</h3>
+        <p class="muted">Prefer to email us directly? Reach out and we’ll route your note to the right product lead.</p>
+        <div class="pill-group">
+          <span class="pill">📧 hello@technous.dev</span>
+          <span class="pill">📍 Remote-first, GMT core hours</span>
+          <span class="pill">🗓️ Response within 1 business day</span>
+        </div>
+        <h4>What to include</h4>
+        <ul>
+          <li>Project goals and deadlines</li>
+          <li>Key platforms (web, mobile, cloud)</li>
+          <li>Budget guardrails and team size</li>
+        </ul>
+      </article>
+    </div>
+  </main>
+
+  <footer>
+    <div>© <span id="year"></span> Technous LTD. Crafted with care.</div>
+    <div class="pill-group" style="margin-top: 8px;">
+      <a class="pill" href="privacy.html">Privacy Policy</a>
+      <a class="pill" href="terms.html">Terms & Conditions</a>
+      <a class="pill" href="index.html">Home</a>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
