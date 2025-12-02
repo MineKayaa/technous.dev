@@ -183,15 +183,47 @@ nav.scrolled {
   align-items: center;
   gap: 12px;
   text-decoration: none;
-  color: var(--text);
+  color: var(--bg);
   font-weight: 800;
   font-size: 1.1rem;
   letter-spacing: -0.5px;
   transition: var(--transition);
+  padding: 8px 16px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, var(--soft-blue), var(--deep-blue));
+  position: relative;
+  overflow: hidden;
+}
+
+.logo::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, var(--deep-blue), var(--soft-blue));
+  opacity: 0;
+  transition: var(--transition);
+  z-index: -1;
+}
+
+.logo:hover::before {
+  opacity: 1;
+}
+
+.logo img {
+  filter: brightness(1.2) contrast(1.1);
+  transition: var(--transition);
+  position: relative;
+  z-index: 1;
+}
+
+.logo:hover img {
+  filter: brightness(1.4) contrast(1.2);
+  transform: scale(1.05);
 }
 
 .logo:hover {
   transform: translateY(-2px);
+  box-shadow: var(--glow-soft);
 }
 
 .logo-mark {
@@ -1181,6 +1213,56 @@ footer .pill-group {
   margin: 0 !important;
 }
 
+footer > div:first-child {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 16px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, var(--soft-blue), var(--deep-blue));
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+footer > div:first-child::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, var(--deep-blue), var(--soft-blue));
+  opacity: 0;
+  transition: var(--transition);
+  z-index: 0;
+}
+
+footer > div:first-child:hover::before {
+  opacity: 1;
+}
+
+footer > div:first-child:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--glow-soft);
+}
+
+footer img {
+  filter: brightness(1.2) contrast(1.1);
+  transition: var(--transition);
+  position: relative;
+  z-index: 1;
+}
+
+footer > div:first-child:hover img {
+  filter: brightness(1.4) contrast(1.2);
+  transform: scale(1.05);
+}
+
+footer > div:first-child span {
+  position: relative;
+  z-index: 1;
+  color: var(--bg);
+  font-weight: 500;
+}
+
 footer a {
   color: var(--text);
   transition: var(--transition);
@@ -1194,6 +1276,37 @@ footer a:hover {
   max-width: 1000px;
   margin: 0 auto;
   padding: 60px 32px;
+  color: var(--text);
+}
+
+.legal-section h1,
+.legal-section h2,
+.legal-section h3,
+.legal-section h4 {
+  color: var(--text);
+}
+
+.legal-section p,
+.legal-section li {
+  color: var(--text);
+}
+
+.legal-section a {
+  color: var(--soft-blue);
+  text-decoration: underline;
+}
+
+.legal-section a:hover {
+  color: var(--deep-blue);
+}
+
+.legal-section table {
+  color: var(--text);
+}
+
+.legal-section table th,
+.legal-section table td {
+  color: var(--text);
 }
 
 /* Responsive Design */
