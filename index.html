@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Technous | Software Applications</title>
-  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="icon" type="image/png" href="assets/images/logo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -18,98 +18,69 @@
       <a class="logo" href="/">
         <img src="assets/images/logo.png" alt="Technous" style="height: 45px;"> Technous
       </a>
-      <ul>
+      <ul class="nav-links">
         <li><a href="#services">Services</a></li>
         <li><a href="#process">Approach</a></li>
         <li><a href="#industries">Industries</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
+      <button class="menu-toggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </div>
   </nav>
 
   <main>
-    <section class="hero">
-      <div class="hero-card hero-copy">
+    <section class="hero-new">
+      <div class="hero-content">
         <div class="badge">Your trusted software partner</div>
         <h1>Building resilient digital products for <span class="gradient-text">bold ideas</span>.</h1>
-        <p>At Technous, we build software that feels modern, reliable, and truly yours - combining strong engineering with thoughtful product sense.</p>
+        <p class="hero-description">At Technous, we build software that feels modern, reliable, and truly yours -
+          combining strong engineering with thoughtful product sense.</p>
         <div class="pill-group">
           <span class="pill"><img src="assets/icons/bolt.svg" alt="Bolt icon" width="16" height="16"> Rapid product
             delivery</span>
-          <span class="pill"><img src="assets/icons/lock.svg" alt="Lock icon" width="16" height="16"> Security you don't have to think about</span>
-          <span class="pill"><img src="assets/icons/chart.svg" alt="Chart icon" width="16" height="16"> Architecture built to grow with you</span>
+          <span class="pill"><img src="assets/icons/lock.svg" alt="Lock icon" width="16" height="16"> Security you don't
+            have to think about</span>
+          <span class="pill"><img src="assets/icons/chart.svg" alt="Chart icon" width="16" height="16"> Architecture
+            built to grow with you</span>
         </div>
         <div class="cta-buttons">
           <a class="button primary" href="contact.html">Start a project</a>
           <a class="button secondary" href="#services">Explore services</a>
         </div>
-        <!-- <div class="metrics">
-          <div class="metric">
-            <strong>120+</strong>
-            <span>Product launches shipped by our team.</span>
-          </div>
-          <div class="metric">
-            <strong>99.9%</strong>
-            <span>Hosted uptime across mission-critical platforms.</span>
-          </div>
-          <div class="metric">
-            <strong>15</strong>
-            <span>Countries served with localized experiences.</span>
-          </div>
-        </div> -->
       </div>
-      <div class="hero-visual hero-card">
-        <div class="glass-panel"></div>
-        <div class="grid-lines"></div>
-        <div class="floating-chips">
-          <div class="chip">Design systems & UI engineering</div>
-          <div class="chip">AI-assisted workflows</div>
-          <div class="chip">Cloud-native & observability</div>
-          <div class="chip">Product strategy & roadmaps</div>
-          <div class="chip">Secure infrastructure</div>
-          <div class="chip">Mobile & Web Solutions</div>
-
+      <div class="hero-illustration">
+        <div class="illustration-wrapper">
+          <img src="assets/images/full-stack.svg" alt="Full Stack Development" class="hero-image active">
+          <img src="assets/images/focused-dev.svg" alt="Focused Development" class="hero-image">
+          <img src="assets/images/web-development.svg" alt="Web Development" class="hero-image">
         </div>
-        <div class="hero-slider">
-          <div class="slide active">
-            <p class="slide-kicker">AI-driven operations</p>
-            <h3>Automate complex decisions with safety and clarity.</h3>
-            <span>Evaluation pipelines, guardrails, and dependable quality.</span>
-          </div>
-          <div class="slide">
-            <p class="slide-kicker">Platform resilience</p>
-            <h3>Ship quickly without losing stability.</h3>
-            <span>Observability, proactive insights, and healthy systems.</span>
-          </div>
-          <div class="slider-dots">
-            <button class="dot active" aria-label="Fintech slide"></button>
-            <button class="dot" aria-label="AI slide"></button>
-            <button class="dot" aria-label="Platform slide"></button>
-          </div>
+        <div class="illustration-dots">
+          <button class="illustration-dot active" data-index="0" aria-label="Full stack illustration"></button>
+          <button class="illustration-dot" data-index="1" aria-label="Focused development illustration"></button>
+          <button class="illustration-dot" data-index="2" aria-label="Web development illustration"></button>
         </div>
+        <div class="floating-accent"></div>
       </div>
     </section>
 
-    <section class="ticker" aria-label="Technous highlights ticker">
-      <div class="ticker-track">
-        <span>Design-led engineering</span>
-        <span>Cloud-native delivery</span>
-        <span>AI assistants & automation</span>
-        <span>Security by default</span>
-        <span>Data you can trust</span>
-        <span>Premium support, always</span>
-      </div>
-
-    </section>
 
     <section id="services" class="section fade-in">
-      <div class="section-header">
-        <div>
-          <div class="badge">What we do</div>
-          <h2>Software crafted end-to-end</h2>
-          <p class="muted">From early concept to full-scale launch, Technous LTD blends creativity with solid engineering so your product stays sharp as it grows.</p>
+      <div class="section-badge-top">
+        <div class="badge">What we do</div>
+      </div>
+      <div class="services-split">
+        <div class="services-image">
+          <img src="assets/images/completed.svg" alt="Completed illustration">
         </div>
-        <div class="halo"></div>
+        <div class="services-text">
+          <h2>Software crafted end-to-end</h2>
+          <p class="muted">From early concept to full-scale launch, Technous blends creativity with solid engineering so
+            your product stays sharp as it grows.</p>
+        </div>
       </div>
       <div class="grid">
         <article class="card scale-in stagger-1">
@@ -124,73 +95,70 @@
               height="16">
           </div>
           <h3>Product Discovery</h3>
-          <p>Find clarity early with research, wireframes, and quick prototypes that help you validate the right direction.</p>
+          <p>Find clarity early with research, wireframes, and quick prototypes that help you validate the right
+            direction.</p>
         </article>
         <article class="card scale-in stagger-3">
           <div class="icon-circle"><img src="assets/icons/cloud.svg" alt="cloud icon" width="16" height="16"></div>
           <h3>Cloud & DevOps</h3>
-          <p>From infra-as-code to monitoring, we make sure your system stays stable, observable, and easy to deploy.</p>
+          <p>From infra-as-code to monitoring, we make sure your system stays stable, observable, and easy to deploy.
+          </p>
         </article>
         <article class="card scale-in stagger-4">
           <div class="icon-circle"><img src="assets/icons/code-branch.svg" alt="code-branch icon" width="16"
               height="16"></div>
           <h3>Team Augmentation</h3>
-          <p>Bring in an experienced developer who integrates smoothly with your workflow and ships real progress from day one.</p>
+          <p>Bring in an experienced developer who integrates smoothly with your workflow and ships real progress from
+            day one.</p>
         </article>
       </div>
     </section>
 
-    <section class="section bento fade-in">
-      <div class="bento-grid">
-        <article class="bento-card wide">
-          <div class="badge">Experience Lab</div>
-          <h3>Motion-rich prototypes that feel alive</h3>
-          <p class="muted">Smooth interactions, meaningful animations, and storytelling that makes your product feel premium.</p>
-          <div class="sparkles" aria-hidden="true"></div>
-        </article>
-        <article class="bento-card">
-          <h4>Compliance-first builds</h4>
-          <p>Security, audit-readiness, and clear data practices you can rely on.</p>
-        </article>
-        <article class="bento-card">
-          <h4>Experience accelerators</h4>
-          <ul>
-            <li>Design system starter kits</li>
-            <li>Onboarding animations</li>
-            <li>Performance tuning scripts</li>
-          </ul>
-        </article>
-      </div>
-    </section>
 
     <section id="process" class="section fade-in">
-      <div class="section-header">
-        <div>
+      <div class="process-split">
+        <div class="process-text">
           <div class="badge">How we deliver</div>
           <h2>A workflow that adapts to your needs</h2>
-          <p class="muted">Clear checkpoints, transparent communication, and documentation that makes collaboration effortless.</p>
+          <p class="muted">Clear checkpoints, transparent communication, and documentation that makes collaboration
+            effortless.</p>
+          <div class="process-image">
+            <img src="assets/images/software-engineer.svg" alt="Software Engineer">
+          </div>
         </div>
-      </div>
-      <div class="process-steps">
-        <div class="step slide-in-left stagger-1">
-          <div class="step-number">01</div>
-          <h4>Shape</h4>
-          <p>Work together to define what we're building and how success looks — without overcomplicating it.</p>
-        </div>
-        <div class="step slide-in-left stagger-2">
-          <div class="step-number">02</div>
-          <h4>Build</h4>
-          <p>Design and development in tight, focused cycles with QA baked into every step.</p>
-        </div>
-        <div class="step slide-in-left stagger-3">
-          <div class="step-number">03</div>
-          <h4>Launch</h4>
-          <p>Prepare for a smooth rollout with checklists, monitoring, and support during the critical phase.</p>
-        </div>
-        <div class="step slide-in-left stagger-4">
-          <div class="step-number">04</div>
-          <h4>Optimize</h4>
-          <p>Refine the product with real data, experiments, and performance improvements.</p>
+        <div class="process-timeline">
+          <div class="timeline-step">
+            <span class="timeline-number">1</span>
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <h4>Shape</h4>
+              <p>Work together to define what we're building and how success looks — without overcomplicating it.</p>
+            </div>
+          </div>
+          <div class="timeline-step">
+            <span class="timeline-number">2</span>
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <h4>Build</h4>
+              <p>Design and development in tight, focused cycles with QA baked into every step.</p>
+            </div>
+          </div>
+          <div class="timeline-step">
+            <span class="timeline-number">3</span>
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <h4>Launch</h4>
+              <p>Prepare for a smooth rollout with checklists, monitoring, and support during the critical phase.</p>
+            </div>
+          </div>
+          <div class="timeline-step">
+            <span class="timeline-number">4</span>
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <h4>Optimize</h4>
+              <p>Refine the product with real data, experiments, and performance improvements.</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -200,51 +168,52 @@
         <div>
           <div class="badge">Where we thrive</div>
           <h2>Expertise that travels well</h2>
-          <p class="muted">We help teams in SaaS, AI, healthcare, and other fast-moving industries build dependable products without slowing down.</p>
+          <p class="muted">We help teams in SaaS, AI, healthcare, and other fast-moving industries build dependable
+            products without slowing down.</p>
         </div>
       </div>
-      <div class="industry-slider">
-        <div class="industry-track">
-          <article class="card">
-            <h4>SaaS & Platforms</h4>
-            <p>Multi-tenant systems, usage analytics, and billing that scales naturally.</p>
-          </article>
-          <article class="card">
-            <h4>AI & Automation</h4>
-            <p>Human-centered AI tools, LLM workflows, and reliable evaluation setups.</p>
-          </article>
-          <article class="card">
-            <h4>Mobile App Development</h4>
-            <p>Clear, consistent mobile experiences with strong data practices and smooth performance.</p>
-          </article>
-          <article class="card">
-            <h4>Healthcare</h4>
-            <p>Privacy-respectful systems, inclusive design, and tools that keep clinicians and patients aligned.</p>
-          </article>
-
-        </div>
-
+      <div class="industry-grid">
+        <article class="card">
+          <h4>SaaS & Platforms</h4>
+          <p>Multi-tenant systems, usage analytics, and billing that scales naturally.</p>
+        </article>
+        <article class="card">
+          <h4>AI & Automation</h4>
+          <p>Human-centered AI tools, LLM workflows, and reliable evaluation setups.</p>
+        </article>
+        <article class="card">
+          <h4>Mobile App Development</h4>
+          <p>Clear, consistent mobile experiences with strong data practices and smooth performance.</p>
+        </article>
       </div>
     </section>
 
     <section class="section fade-in">
-      <div class="card scale-in">
-        <div class="badge">Let's build</div>
-        <h3>Bring your next release to Technous LTD</h3>
-        <p class="muted">Share your roadmap and we'll help you turn it into a clear plan with milestones and a dedicated execution approach.</p>
-        <div class="cta-buttons" style="align-items: center;">
-          <a class="button primary" href="contact.html"><img src="assets/icons/phone.svg" alt="Phone icon" width="20"
-              height="20"> Reach us now</a>
-          <a class="button secondary" href="terms.html">Review our terms</a>
+      <div class="card scale-in cta-card-split">
+        <div class="cta-card-content">
+          <div class="badge">Let's build</div>
+          <h3>Bring your next release to Technous</h3>
+          <p class="muted">Share your roadmap and we'll help you turn it into a clear plan with milestones and a
+            dedicated execution approach.</p>
+          <div class="cta-buttons">
+            <a class="button primary" href="contact.html"><img src="assets/icons/phone.svg" alt="Phone icon" width="20"
+                height="20"> Reach us now</a>
+            <a class="button secondary" href="terms.html">Review our terms</a>
+          </div>
+        </div>
+        <div class="cta-card-image">
+          <img src="assets/images/dev-productivity.svg" alt="Developer productivity">
         </div>
       </div>
     </section>
   </main>
 
   <footer>
-    <div style="display: flex; align-items: center; gap: 12px;">
-      <img src="assets/images/logo.png" alt="Technous" style="height: 24px;">
-      <span>© <span id="year"></span> Technous LTD. Built with care.</span>
+    <div style="display: flex; flex-direction: column; gap: 4px;">
+      <div style="display: flex; align-items: center; gap: 12px;">
+        <span>© <span id="year"></span> Technous LTD. Built with care.</span>
+      </div>
+      <span class="footer-address">71-75 Shelton Street, Covent Garden, London, WC2H 9JQ</span>
     </div>
     <div class="pill-group" style="margin-top: 0;">
       <a class="pill" href="privacy.html">Privacy Policy</a>
@@ -360,28 +329,30 @@
     }
 
     // ============================================
-    // HERO SLIDER
+    // HERO IMAGE CAROUSEL
     // ============================================
-    const slides = Array.from(document.querySelectorAll('.hero-slider .slide'));
-    const dots = Array.from(document.querySelectorAll('.hero-slider .dot'));
-    let current = 0;
+    const heroImages = Array.from(document.querySelectorAll('.hero-image'));
+    const illustrationDots = Array.from(document.querySelectorAll('.illustration-dot'));
+    let currentImage = 0;
 
-    function showSlide(index) {
-      slides.forEach((slide, i) => slide.classList.toggle('active', i === index));
-      dots.forEach((dot, i) => dot.classList.toggle('active', i === index));
-      current = index;
+    function showImage(index) {
+      heroImages.forEach((img, i) => img.classList.toggle('active', i === index));
+      illustrationDots.forEach((dot, i) => dot.classList.toggle('active', i === index));
+      currentImage = index;
     }
 
-    dots.forEach((dot, i) => dot.addEventListener('click', () => {
-      showSlide(i);
-      resetTimer();
+    // Click handlers for dots
+    illustrationDots.forEach((dot, i) => dot.addEventListener('click', () => {
+      showImage(i);
+      resetImageTimer();
     }));
 
-    let timer = setInterval(() => showSlide((current + 1) % slides.length), 5000);
+    // Auto-advance every 4 seconds
+    let imageTimer = setInterval(() => showImage((currentImage + 1) % heroImages.length), 4000);
 
-    function resetTimer() {
-      clearInterval(timer);
-      timer = setInterval(() => showSlide((current + 1) % slides.length), 5000);
+    function resetImageTimer() {
+      clearInterval(imageTimer);
+      imageTimer = setInterval(() => showImage((currentImage + 1) % heroImages.length), 4000);
     }
 
     // ============================================
@@ -429,6 +400,29 @@
         ticking = true;
       }
     });
+
+    // ============================================
+    // MOBILE MENU
+    // ============================================
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    const navA = document.querySelectorAll('.nav-links a');
+
+    if (menuToggle && navLinks) {
+      menuToggle.addEventListener('click', () => {
+        menuToggle.classList.toggle('active');
+        navLinks.classList.toggle('active');
+        document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
+      });
+
+      navA.forEach(link => {
+        link.addEventListener('click', () => {
+          menuToggle.classList.remove('active');
+          navLinks.classList.remove('active');
+          document.body.style.overflow = '';
+        });
+      });
+    }
 
     // ============================================
     // PERFORMANCE: Reduce animations on low-end devices

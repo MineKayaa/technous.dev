@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="assets/images/logo.png">
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
@@ -17,12 +18,17 @@
       <a class="logo" href="index.html">
         <img src="assets/images/logo.png" alt="Technous" style="height: 40px;"> Technous
       </a>
-      <ul>
+      <ul class="nav-links">
         <li><a href="index.html#services">Services</a></li>
         <li><a href="index.html#process">Approach</a></li>
         <li><a href="index.html#industries">Industries</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
+      <button class="menu-toggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </div>
   </nav>
 
@@ -58,19 +64,16 @@
         </form>
       </article>
 
-      <article class="card scale-in stagger-2">
+      <article class="card scale-in stagger-2 contact-info-card">
         <h3>Quick details</h3>
-        <p class="muted">Prefer to email us directly? Reach out and we’ll route your note to the right product lead.</p>
+        <p class="muted">Prefer to email us directly? Reach out and we'll route your note to the right product lead.</p>
         <div class="pill-group">
           <span class="pill"><img src="assets/icons/mail.svg" alt="mail" width="16" height="16">
             hello@technous.dev</span>
-          <span class="pill"><img src="assets/icons/mobile-signal.svg" width="16" height="16" alt="mobile-signal icon"
-              width="16" height="16">
+          <span class="pill"><img src="assets/icons/mobile-signal.svg" width="16" height="16" alt="mobile-signal icon">
             Remote-first, GMT core hours</span>
-          <span class="pill"><img src="assets/icons/arrow-rotate-right-24.svg" width="16" height="16" alt="24 icon"
-              width="16" height="16">
-            Response within 1
-            business day</span>
+          <span class="pill"><img src="assets/icons/arrow-rotate-right-24.svg" width="16" height="16" alt="24 icon">
+            Response within 1 business day</span>
         </div>
         <h4>What to include</h4>
         <ul>
@@ -78,14 +81,19 @@
           <li>Key platforms (web, mobile, cloud)</li>
           <li>Budget guardrails and team size</li>
         </ul>
+        <div class="contact-card-image">
+          <img src="assets/images/contact.svg" alt="Contact illustration">
+        </div>
       </article>
     </div>
   </main>
 
   <footer>
-    <div style="display: flex; align-items: center; gap: 12px;">
-      <img src="assets/images/logo.png" alt="Technous" style="height: 24px;">
-      <span>© <span id="year"></span> Technous LTD. Crafted with care.</span>
+    <div style="display: flex; flex-direction: column; gap: 4px;">
+      <div style="display: flex; align-items: center; gap: 12px;">
+        <span>© <span id="year"></span> Technous LTD. Crafted with care.</span>
+      </div>
+      <span class="footer-address">71-75 Shelton Street, Covent Garden, London, WC2H 9JQ</span>
     </div>
     <div class="pill-group">
       <a class="pill" href="privacy.html">Privacy Policy</a>
@@ -96,14 +104,14 @@
 
   <script>
     // Form submission handler - sends email via mailto
-    document.getElementById('contact-form').addEventListener('submit', function(event) {
+    document.getElementById('contact-form').addEventListener('submit', function (event) {
       event.preventDefault();
-      
+
       const name = document.getElementById('name').value;
       const email = document.getElementById('email').value;
       const company = document.getElementById('company').value;
       const message = document.getElementById('message').value;
-      
+
       // Build email subject and body
       const subject = encodeURIComponent('New Contact Form Submission from ' + name);
       const body = encodeURIComponent(
@@ -112,21 +120,21 @@
         'Company: ' + (company || 'Not provided') + '\n\n' +
         'Message:\n' + message
       );
-      
+
       // Create mailto link
       const mailtoLink = 'mailto:hello@technous.dev?subject=' + subject + '&body=' + body;
-      
+
       // Open email client
       window.location.href = mailtoLink;
-      
+
       // Show success message
       const statusDiv = document.getElementById('form-status');
       statusDiv.style.display = 'block';
       statusDiv.style.color = '#10b981';
       statusDiv.textContent = 'Opening your email client... If it doesn\'t open, please email us directly at hello@technous.dev';
-      
+
       // Reset form after a short delay
-      setTimeout(function() {
+      setTimeout(function () {
         document.getElementById('contact-form').reset();
       }, 1000);
     });
@@ -173,6 +181,29 @@
         ticking = true;
       }
     });
+
+    // ============================================
+    // MOBILE MENU
+    // ============================================
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    const navA = document.querySelectorAll('.nav-links a');
+
+    if (menuToggle && navLinks) {
+      menuToggle.addEventListener('click', () => {
+        menuToggle.classList.toggle('active');
+        navLinks.classList.toggle('active');
+        document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
+      });
+
+      navA.forEach(link => {
+        link.addEventListener('click', () => {
+          menuToggle.classList.remove('active');
+          navLinks.classList.remove('active');
+          document.body.style.overflow = '';
+        });
+      });
+    }
 
     // Mouse Tracking for Cards
     const cards = document.querySelectorAll('.card');
