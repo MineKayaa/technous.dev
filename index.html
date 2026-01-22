@@ -16,7 +16,7 @@
   <nav>
     <div class="nav-container">
       <a class="logo" href="/">
-        <img src="assets/images/technous.png" alt="Technous" style="height: 60px;"> Technous
+        <img src="assets/images/technous.png" alt="Technous" style="height: 80px;"> Technous
       </a>
       <ul class="nav-links">
         <li><a href="#services">Services</a></li>
@@ -185,6 +185,10 @@
           <h4>Mobile App Development</h4>
           <p>Clear, consistent mobile experiences with strong data practices and smooth performance.</p>
         </article>
+        <article class="card">
+          <h4>Industrial IT</h4>
+          <p>Specialized systems for manufacturing, logistics, and industrial monitoring and control.</p>
+        </article>
       </div>
     </section>
 
@@ -209,11 +213,14 @@
   </main>
 
   <footer>
-    <div style="display: flex; flex-direction: column; gap: 4px;">
-      <div style="display: flex; align-items: center; gap: 12px;">
-        <span>© <span id="year"></span> Technous LTD. Built with care.</span>
+    <div style="display: flex; align-items: center; gap: 16px;">
+      <img src="assets/images/technous.png" alt="Technous" style="height: 48px;">
+      <div style="display: flex; flex-direction: column; gap: 4px;">
+        <div style="display: flex; align-items: center; gap: 12px;">
+          <span>© <span id="year"></span> Technous LTD. Built with care.</span>
+        </div>
+        <span class="footer-address">71-75 Shelton Street, Covent Garden, London, United Kingdom</span>
       </div>
-      <span class="footer-address">71-75 Shelton Street, Covent Garden, London, United Kingdom</span>
     </div>
     <div class="pill-group" style="margin-top: 0;">
       <a class="pill" href="privacy.html">Privacy Policy</a>
@@ -356,8 +363,32 @@
     }
 
     // ============================================
-    // SMOOTH SCROLL FOR NAVIGATION
+    // CUSTOM SLOW SMOOTH SCROLL
     // ============================================
+    function smoothScrollTo(element, duration = 1200) {
+      const targetPosition = element.getBoundingClientRect().top + window.pageYOffset;
+      const startPosition = window.pageYOffset;
+      const distance = targetPosition - startPosition;
+      let startTime = null;
+
+      function animation(currentTime) {
+        if (startTime === null) startTime = currentTime;
+        const timeElapsed = currentTime - startTime;
+        const run = ease(timeElapsed, startPosition, distance, duration);
+        window.scrollTo(0, run);
+        if (timeElapsed < duration) requestAnimationFrame(animation);
+      }
+
+      function ease(t, b, c, d) {
+        t /= d / 2;
+        if (t < 1) return c / 2 * t * t + b;
+        t--;
+        return -c / 2 * (t * (t - 2) - 1) + b;
+      }
+
+      requestAnimationFrame(animation);
+    }
+
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function (e) {
         const href = this.getAttribute('href');
@@ -365,10 +396,7 @@
           e.preventDefault();
           const target = document.querySelector(href);
           if (target) {
-            target.scrollIntoView({
-              behavior: 'smooth',
-              block: 'start'
-            });
+            smoothScrollTo(target, 300); // 1.5 seconds for a slower, premium feel
           }
         }
       });
