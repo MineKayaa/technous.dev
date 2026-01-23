@@ -246,19 +246,20 @@ nav.scrolled {
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  height: clamp(48px, 80px, 80px);
-  /* Height will be set inline in HTML but clamped here for safety */
+  height: 80px;
+  /* Default desktop height */
 }
 
 .logo-scaled {
-  transform: scale(1.5);
+  height: 100%;
+  width: auto;
+  transform: scale(1.1);
   transform-origin: center;
   transition: var(--transition);
 }
 
 .logo:hover .logo-scaled {
   transform: scale(1.15);
-  /* Slightly more on hover for feedback */
 }
 
 .logo-mark {
@@ -1629,8 +1630,12 @@ footer a:hover {
     padding: 6px 12px;
   }
 
+  .logo-wrapper {
+    height: 32px;
+  }
+
   .logo img {
-    height: 32px !important;
+    height: 100%;
   }
 
   nav ul {
