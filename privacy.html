@@ -16,27 +16,32 @@
   <nav>
     <div class="nav-container">
       <a class="logo" href="/">
-        <div class="logo-wrapper" style="height: 80px;">
-          <img src="assets/images/technous.png" alt="Technous" class="logo-scaled" style="height: 80px;">
+        <div class="logo-wrapper">
+          <img src="assets/images/technous.png" alt="Technous" class="logo-scaled">
         </div> Technous
       </a>
-      <ul>
+      <ul class="nav-links">
         <li><a href="index.html#services">Services</a></li>
         <li><a href="index.html#process">Approach</a></li>
         <li><a href="index.html#industries">Industries</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
+      <button class="menu-toggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </div>
   </nav>
 
   <main class="legal-section">
     <div class="badge">Privacy Policy</div>
     <h1>PRIVACY POLICY</h1>
-    <p class="muted">Last updated December 02, 2025</p>
+    <p class="muted">Last updated January 23, 2026</p>
 
-    <p>This Privacy Notice for Technous LTD (doing business as Nimble) ("we," "us," or "our"), describes how and why we
-      might collect, store, use, and/or share ("process") your information when you use our services ("Services"), such
-      as when you:</p>
+    <p>This Privacy Notice for Technous LTD (doing business as Technous) ("we," "us," or "our"), describes how and why
+      we might collect, store, use, and/or share ("process") your information when you use our services ("Services"),
+      such as when you:</p>
     <ul>
       <li>Visit our website at <a href="https://technous.dev">https://technous.dev</a> or any website of ours that
         links to this Privacy Notice</li>
@@ -324,7 +329,7 @@
       has
       been collected, we will deactivate the account and take reasonable measures to promptly delete such data from our
       records. If you become aware of any data we may have collected from children under age 18 or the equivalent age as
-      specified by law in your jurisdiction, please contact us at <strong>mine.kaya@technous.dev</strong>.</p>
+      specified by law in your jurisdiction, please contact us at <strong>hello@technous.dev</strong>.</p>
 
     <h2 id="what-are-your-privacy-rights">9. WHAT ARE YOUR PRIVACY RIGHTS?</h2>
     <p><strong><em>In Short:</em></strong> Depending on your state of residence in the US or in some regions, such as
@@ -627,7 +632,7 @@
     <h2 id="how-can-you-contact-us-about-this-notice">13. HOW CAN YOU CONTACT US ABOUT THIS NOTICE?</h2>
     <p>If you have questions or comments about this notice, you may contact our Data Protection Officer (DPO) by email
       at
-      <strong>mine.kaya@technous.dev</strong>, or contact us by post at:
+      <strong>hello@technous.dev</strong>, or contact us by post at:
     </p>
     <p><strong>Technous LTD</strong><br>
       Data Protection Officer<br>
@@ -706,6 +711,29 @@
         ticking = true;
       }
     });
+
+    // ============================================
+    // MOBILE MENU
+    // ============================================
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    const navA = document.querySelectorAll('.nav-links a');
+
+    if (menuToggle && navLinks) {
+      menuToggle.addEventListener('click', () => {
+        menuToggle.classList.toggle('active');
+        navLinks.classList.toggle('active');
+        document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
+      });
+
+      navA.forEach(link => {
+        link.addEventListener('click', () => {
+          menuToggle.classList.remove('active');
+          navLinks.classList.remove('active');
+          document.body.style.overflow = '';
+        });
+      });
+    }
   </script>
 </body>
 
