@@ -241,6 +241,26 @@ nav.scrolled {
   color: var(--logo-grey);
 }
 
+.logo-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  height: clamp(48px, 80px, 80px);
+  /* Height will be set inline in HTML but clamped here for safety */
+}
+
+.logo-scaled {
+  transform: scale(1.5);
+  transform-origin: center;
+  transition: var(--transition);
+}
+
+.logo:hover .logo-scaled {
+  transform: scale(1.15);
+  /* Slightly more on hover for feedback */
+}
+
 .logo-mark {
   width: 42px;
   height: 42px;
@@ -1447,18 +1467,32 @@ footer a:hover {
     right: -100%;
     width: 280px;
     height: 100vh;
-    background: rgba(0, 0, 0, 0.98);
-    backdrop-filter: blur(20px);
+    background: rgba(247, 247, 247, 0.9);
+    backdrop-filter: blur(25px) saturate(160%);
     flex-direction: column;
-    padding: 100px 40px;
-    gap: 20px;
-    transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    padding: 100px 32px;
+    gap: 12px;
+    transition: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
     z-index: 999;
-    border-left: 1px solid var(--card-border);
+    border-left: 1px solid rgba(122, 122, 122, 0.1);
+    box-shadow: -10px 0 40px rgba(0, 0, 0, 0.05);
   }
 
   .nav-links.active {
     right: 0;
+  }
+
+  .nav-links a {
+    width: 100%;
+    justify-content: flex-start;
+    font-size: 1.1rem;
+    padding: 16px 20px;
+    border-radius: 12px;
+  }
+
+  .nav-links a:hover {
+    background: rgba(122, 122, 122, 0.05);
+    transform: translateX(5px);
   }
 
   .menu-toggle.active span:nth-child(1) {
@@ -1498,8 +1532,9 @@ footer a:hover {
   }
 
   .illustration-dots {
-    bottom: 10px;
+    bottom: -15px;
     padding: 8px 16px;
+    z-index: 20;
   }
 
   .section-header {
@@ -1643,6 +1678,7 @@ footer a:hover {
 
   .hero-illustration {
     min-height: 250px;
+    margin-bottom: 20px;
   }
 
   .hero-image {
