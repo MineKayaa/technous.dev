@@ -9,6 +9,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" href="assets/images/technous.png">
+  <!-- Preload critical logo image -->
+  <link rel="preload" as="image" href="assets/images/technous.png" fetchpriority="high">
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
@@ -392,7 +394,9 @@
 
   <footer>
     <div style="display: flex; align-items: center; gap: 16px;">
-      <img src="assets/images/technous.png" alt="Technous" style="height: 48px;">
+      <div class="logo-wrapper" style="height: 48px;">
+        <img src="assets/images/technous.png" alt="Technous" class="logo-scaled" loading="lazy">
+      </div>
       <div style="display: flex; flex-direction: column; gap: 4px;">
         <div style="display: flex; align-items: center; gap: 12px;">
           <span>© <span id="year"></span> Technous LTD. Build with care.</span>

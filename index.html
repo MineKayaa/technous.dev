@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Technous</title>
   <link rel="icon" type="image/png" href="assets/images/technous.png">
+  <!-- Preload critical logo image -->
+  <link rel="preload" as="image" href="assets/images/technous.png" fetchpriority="high">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -17,7 +19,7 @@
     <div class="nav-container">
       <a class="logo" href="/">
         <div class="logo-wrapper">
-          <img src="assets/images/technous.png" alt="Technous" class="logo-scaled">
+          <img src="assets/images/technous.png" alt="Technous" class="logo-scaled" fetchpriority="high">
         </div> Technous
       </a>
       <ul class="nav-links">
@@ -217,7 +219,7 @@
   <footer>
     <div style="display: flex; align-items: center; gap: 16px;">
       <div class="logo-wrapper" style="height: 48px;">
-        <img src="assets/images/technous.png" alt="Technous" class="logo-scaled">
+        <img src="assets/images/technous.png" alt="Technous" class="logo-scaled" loading="lazy">
       </div>
       <div style="display: flex; flex-direction: column; gap: 4px;">
         <div style="display: flex; align-items: center; gap: 12px;">

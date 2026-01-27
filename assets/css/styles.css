@@ -23,9 +23,13 @@
 /* Global Icon Styling */
 .icon-circle img,
 .pill img,
-.button img,
 nav a img {
   filter: brightness(0) saturate(100%) invert(48%) sepia(0%) saturate(0%) hue-rotate(191deg) brightness(96%) contrast(87%);
+  transition: var(--transition);
+}
+
+.button img {
+  filter: brightness(0) invert(1);
   transition: var(--transition);
 }
 
@@ -1267,7 +1271,7 @@ nav a.active {
   padding: 16px 20px;
   border-radius: 16px;
   border: 1px solid var(--card-border);
-  background: rgba(0, 0, 0, 0.2);
+  background: rgba(255, 255, 255, 0.6);
   color: var(--text);
   font-size: 1rem;
   font-family: inherit;
@@ -1276,13 +1280,13 @@ nav a.active {
 }
 
 .input::placeholder {
-  color: rgba(239, 236, 227, 0.3);
+  color: rgba(90, 90, 90, 0.6);
 }
 
 .input:focus {
   outline: none;
   border-color: var(--soft-blue);
-  background: rgba(239, 236, 227, 0.05);
+  background: rgba(255, 255, 255, 0.8);
   box-shadow: 0 0 0 4px rgba(74, 112, 169, 0.15);
   transform: translateY(-2px);
 }
@@ -1304,6 +1308,10 @@ textarea.input {
 .contact-info-card {
   display: flex;
   flex-direction: column;
+}
+
+.contact-info-card .pill-group {
+  margin-top: 16px;
 }
 
 .contact-card-image {
