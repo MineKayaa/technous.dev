@@ -1242,6 +1242,51 @@ nav a.active {
   }
 }
 
+/* Contact Header - Row Layout */
+.contact-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 32px;
+  margin-bottom: 32px;
+  margin-top: -40px;
+}
+
+.contact-header .badge {
+  margin-bottom: 0;
+  flex-shrink: 0;
+  margin-top: 4px;
+  order: 2;
+  padding: 16px 32px;
+  font-size: 0.9rem;
+  letter-spacing: 1.5px;
+  background: linear-gradient(135deg, rgba(143, 171, 212, 0.15), rgba(74, 112, 169, 0.1));
+  border-color: rgba(143, 171, 212, 0.3);
+  color: var(--deep-blue);
+  box-shadow: 0 2px 12px rgba(143, 171, 212, 0.15);
+}
+
+.contact-header .badge:hover {
+  background: linear-gradient(135deg, rgba(143, 171, 212, 0.25), rgba(74, 112, 169, 0.2));
+  border-color: rgba(143, 171, 212, 0.5);
+  box-shadow: 0 4px 20px rgba(143, 171, 212, 0.25);
+  color: var(--deep-blue);
+}
+
+.contact-header-text {
+  order: 1;
+}
+
+.contact-header-text h1 {
+  margin-top: 0;
+  font-size: 1.8rem;
+}
+
+.contact-header-text .muted {
+  margin-bottom: 0;
+  font-size: 0.92rem;
+}
+
 /* Forms */
 .contact-grid {
   display: grid;
@@ -1308,6 +1353,10 @@ textarea.input {
 .contact-info-card {
   display: flex;
   flex-direction: column;
+}
+
+.contact-info-card .muted {
+  margin-bottom: 0;
 }
 
 .contact-info-card .pill-group {
@@ -1742,6 +1791,15 @@ footer a:hover {
 
   .step {
     padding: 24px;
+  }
+
+  .contact-header {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .contact-header .badge {
+    margin-top: 0;
   }
 
   .contact-grid {
