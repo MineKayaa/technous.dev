@@ -1247,7 +1247,7 @@ nav a.active {
   position: absolute;
   top: -8px;
   right: -8px;
-  background: var(--deep-blue);
+  background: var(--soft-blue);
   color: #fff;
   font-size: 9px;
   font-weight: 800;
@@ -1255,7 +1255,7 @@ nav a.active {
   border-radius: 10px;
   text-transform: uppercase;
   letter-spacing: 0.6px;
-  box-shadow: 0 2px 8px rgba(74, 112, 169, 0.4);
+  box-shadow: 0 2px 8px rgba(143, 171, 212, 0.5);
   pointer-events: none;
 }
 
