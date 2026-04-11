@@ -526,6 +526,17 @@ nav a.active {
   color: var(--alt-bg);
 }
 
+.badge.blue {
+  background: rgba(74, 112, 169, 0.12);
+  color: var(--deep-blue);
+  border-color: rgba(74, 112, 169, 0.3);
+}
+
+.badge.blue:hover {
+  background: rgba(74, 112, 169, 0.18);
+  color: var(--deep-blue);
+}
+
 /* Pills */
 .pill-group {
   display: flex;
@@ -1198,6 +1209,16 @@ nav a.active {
 
 .industry-grid .card {
   min-height: 180px;
+}
+
+/* Product cards: flex column so store badges align to bottom */
+#products .grid .card {
+  display: flex;
+  flex-direction: column;
+}
+
+#products .grid .card .store-badges {
+  margin-top: auto;
 }
 
 /* Product store badges */
