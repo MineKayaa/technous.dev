@@ -1230,6 +1230,7 @@ nav a.active {
 }
 
 .store-btn {
+  position: relative;
   display: inline-flex;
   align-items: center;
   gap: 10px;
@@ -1240,6 +1241,22 @@ nav a.active {
   color: var(--text);
   text-decoration: none;
   transition: var(--transition);
+}
+
+.soon-tag {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: var(--deep-blue);
+  color: #fff;
+  font-size: 9px;
+  font-weight: 800;
+  padding: 3px 8px;
+  border-radius: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  box-shadow: 0 2px 8px rgba(74, 112, 169, 0.4);
+  pointer-events: none;
 }
 
 .store-btn:hover {
