@@ -7,28 +7,52 @@
   <title>Technous</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" href="assets/images/technous.png">
+  <meta name="theme-color" content="#f6f7f9" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0b0e15" media="(prefers-color-scheme: dark)">
   <!-- Preload critical logo image -->
-  <link rel="preload" as="image" href="assets/images/technous.png" fetchpriority="high">
+  <link rel="preload" as="image" href="assets/images/technous-mark.png" fetchpriority="high">
   <link rel="stylesheet" href="assets/css/styles.css">
+  <script>
+    // Apply a saved theme before paint so the page never flashes the wrong colours
+    try { var t = localStorage.getItem('theme'); if (t) document.documentElement.setAttribute('data-theme', t); } catch (e) { }
+  </script>
 </head>
 
-<body class="background-blobs">
+<body>
   <nav>
     <div class="nav-container">
       <a class="logo" href="/">
         <div class="logo-wrapper">
-          <img src="assets/images/technous.png" alt="Technous" class="logo-scaled">
+          <img src="assets/images/technous-mark.png" alt="" class="logo-mark-img">
         </div> Technous
       </a>
       <ul class="nav-links">
         <li><a href="index.html#services">Services</a></li>
+        <li><a href="index.html#products">Products</a></li>
         <li><a href="index.html#process">Approach</a></li>
         <li><a href="index.html#industries">Industries</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li class="mobile-only"><a class="button secondary" href="contact.html">Contact</a></li>
+        <li class="mobile-only"><a class="button primary" href="contact.html">Start a project</a></li>
       </ul>
-      <button class="menu-toggle" aria-label="Toggle menu">
+      <div class="nav-actions">
+        <button class="theme-toggle" type="button" aria-label="Switch between light and dark theme">
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="4"></circle>
+            <path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4">
+            </path>
+          </svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a7 7 0 1 0 10.5 10.5z"></path>
+          </svg>
+        </button>
+        <a class="button secondary" href="contact.html">Contact</a>
+        <a class="button primary" href="contact.html">Start a project</a>
+      </div>
+      <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
         <span></span>
         <span></span>
         <span></span>
@@ -38,7 +62,7 @@
 
   <main class="legal-section">
     <div class="badge">Terms & Conditions</div>
-    <h1>TERMS AND CONDITIONS</h1>
+    <h1>Terms and conditions</h1>
     <p class="muted">Last updated: March 7, 2026</p>
 
     <h2>AGREEMENT TO OUR LEGAL TERMS</h2>
@@ -366,27 +390,25 @@
   </main>
 
   <footer>
-    <div style="display: flex; align-items: center; gap: 16px;">
-      <div class="logo-wrapper" style="height: 48px;">
-        <img src="assets/images/technous.png" alt="Technous" class="logo-scaled" loading="lazy">
-      </div>
-      <div style="display: flex; flex-direction: column; gap: 4px;">
-        <div style="display: flex; align-items: center; gap: 12px;">
-          <span>© <span id="year"></span> Technous LTD. Build with care.</span>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="logo-wrapper">
+          <img src="assets/images/technous-mark.png" alt="" class="logo-mark-img" loading="lazy">
         </div>
-        <span class="footer-address">71-75 Shelton Street, Covent Garden, London, United Kingdom</span>
+        <div>
+          <span>© <span id="year"></span> Technous LTD. Built with care.</span>
+          <span class="footer-address">71-75 Shelton Street, Covent Garden, London, United Kingdom</span>
+        </div>
       </div>
-    </div>
-    <div class="pill-group">
-      <a class="pill" href="privacy.html">Privacy Policy</a>
-      <a class="pill" href="contact.html">Contact</a>
-      <a class="pill" href="index.html">Home</a>
+      <ul class="footer-links">
+        <li><a href="privacy.html">Privacy policy</a></li>
+        <li><a href="terms.html">Terms &amp; conditions</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
     </div>
   </footer>
 
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+  <script src="assets/js/site.js"></script>
 </body>
 
 </html>

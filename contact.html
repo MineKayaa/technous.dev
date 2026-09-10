@@ -4,31 +4,55 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Technous</title>
+  <title>Contact · Technous</title>
+  <meta name="description" content="Tell us about your next release. Technous responds within one business day.">
+  <meta name="theme-color" content="#f6f7f9" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0b0e15" media="(prefers-color-scheme: dark)">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" href="assets/images/technous.png">
-  <!-- Preload critical logo image -->
-  <link rel="preload" as="image" href="assets/images/technous.png" fetchpriority="high">
+  <link rel="preload" as="image" href="assets/images/technous-mark.png" fetchpriority="high">
   <link rel="stylesheet" href="assets/css/styles.css">
+  <script>
+    // Apply a saved theme before paint so the page never flashes the wrong colours
+    try { var t = localStorage.getItem('theme'); if (t) document.documentElement.setAttribute('data-theme', t); } catch (e) { }
+  </script>
 </head>
 
-<body class="background-blobs">
+<body>
   <nav>
     <div class="nav-container">
       <a class="logo" href="/">
         <div class="logo-wrapper">
-          <img src="assets/images/technous.png" alt="Technous" class="logo-scaled">
+          <img src="assets/images/technous-mark.png" alt="" class="logo-mark-img">
         </div> Technous
       </a>
       <ul class="nav-links">
         <li><a href="index.html#services">Services</a></li>
+        <li><a href="index.html#products">Products</a></li>
         <li><a href="index.html#process">Approach</a></li>
         <li><a href="index.html#industries">Industries</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li class="mobile-only"><a class="button secondary" href="contact.html">Contact</a></li>
+        <li class="mobile-only"><a class="button primary" href="contact.html">Start a project</a></li>
       </ul>
-      <button class="menu-toggle" aria-label="Toggle menu">
+      <div class="nav-actions">
+        <button class="theme-toggle" type="button" aria-label="Switch between light and dark theme">
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="4"></circle>
+            <path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4">
+            </path>
+          </svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a7 7 0 1 0 10.5 10.5z"></path>
+          </svg>
+        </button>
+        <a class="button secondary" href="contact.html">Contact</a>
+        <a class="button primary" href="contact.html">Start a project</a>
+      </div>
+      <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
         <span></span>
         <span></span>
         <span></span>
@@ -38,11 +62,14 @@
 
   <main class="section fade-in">
     <div class="contact-header">
-      <div class="badge">Get in touch</div>
       <div class="contact-header-text">
-        <h1>Let’s talk about your next release</h1>
-        <p class="muted">Share your goals, timeline, and the challenges you want to solve. We’ll respond within one business
-          day.</p>
+        <div class="badge">Contact</div>
+        <h1>Let's talk about your next release</h1>
+        <p class="muted">Share your goals, timeline, and the challenges you want to solve. We respond within one
+          business day.</p>
+      </div>
+      <div class="contact-header-image">
+        <img src="assets/images/contact.svg" alt="" fetchpriority="high">
       </div>
     </div>
 
@@ -67,20 +94,20 @@
             <textarea class="input" name="message" id="message"
               placeholder="Product build, platform modernization, or team augmentation details"></textarea>
           </label>
-          <button class="button primary" type="submit">Send message</button>
-          <div id="form-status" style="margin-top: 1rem; display: none;"></div>
+          <button class="button primary large" type="submit">Send message</button>
+          <div id="form-status" hidden></div>
         </form>
       </article>
 
-      <article class="card scale-in stagger-2 contact-info-card">
+      <article class="card contact-info-card scale-in stagger-2">
         <h3>Quick details</h3>
         <p class="muted">Prefer to email us directly? Reach out and we'll route your note to the right product lead.</p>
         <div class="pill-group">
-          <span class="pill"><img src="assets/icons/mail.svg" alt="mail" width="16" height="16">
-            hello@technous.dev</span>
-          <span class="pill"><img src="assets/icons/mobile-signal.svg" width="16" height="16" alt="mobile-signal icon">
-            Remote-first, GMT core hours</span>
-          <span class="pill"><img src="assets/icons/arrow-rotate-right-24.svg" width="16" height="16" alt="24 icon">
+          <a class="pill" href="mailto:hello@technous.dev"><img src="assets/icons/mail.svg" alt="" width="14"
+              height="14"> hello@technous.dev</a>
+          <span class="pill"><img src="assets/icons/mobile-signal.svg" width="14" height="14" alt=""> Remote-first,
+            GMT core hours</span>
+          <span class="pill"><img src="assets/icons/arrow-rotate-right-24.svg" width="14" height="14" alt="">
             Response within 1 business day</span>
         </div>
         <h4>What to include</h4>
@@ -89,185 +116,57 @@
           <li>Key platforms (web, mobile, cloud)</li>
           <li>Budget guardrails and team size</li>
         </ul>
-        <div class="contact-card-image">
-          <img src="assets/images/contact.svg" alt="Contact illustration">
-        </div>
       </article>
     </div>
   </main>
 
   <footer>
-    <div style="display: flex; align-items: center; gap: 16px;">
-      <div class="logo-wrapper" style="height: 48px;">
-        <img src="assets/images/technous.png" alt="Technous" class="logo-scaled" loading="lazy">
-      </div>
-      <div style="display: flex; flex-direction: column; gap: 4px;">
-        <div style="display: flex; align-items: center; gap: 12px;">
-          <span>© <span id="year"></span> Technous LTD. Build with care.</span>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="logo-wrapper">
+          <img src="assets/images/technous-mark.png" alt="" class="logo-mark-img" loading="lazy">
         </div>
-        <span class="footer-address">71-75 Shelton Street, Covent Garden, London, United Kingdom</span>
+        <div>
+          <span>© <span id="year"></span> Technous LTD. Built with care.</span>
+          <span class="footer-address">71-75 Shelton Street, Covent Garden, London, United Kingdom</span>
+        </div>
       </div>
-    </div>
-    <div class="pill-group">
-      <a class="pill" href="privacy.html">Privacy Policy</a>
-      <a class="pill" href="terms.html">Terms & Conditions</a>
-      <a class="pill" href="index.html">Home</a>
+      <ul class="footer-links">
+        <li><a href="privacy.html">Privacy policy</a></li>
+        <li><a href="terms.html">Terms &amp; conditions</a></li>
+        <li><a href="index.html">Home</a></li>
+      </ul>
     </div>
   </footer>
 
+  <script src="assets/js/site.js"></script>
   <script>
-    // Form submission handler - sends email via mailto
+    // The form opens the visitor's mail client with the message prefilled.
     document.getElementById('contact-form').addEventListener('submit', function (event) {
       event.preventDefault();
 
-      const name = document.getElementById('name').value;
-      const email = document.getElementById('email').value;
-      const company = document.getElementById('company').value;
-      const message = document.getElementById('message').value;
+      var name = document.getElementById('name').value;
+      var email = document.getElementById('email').value;
+      var company = document.getElementById('company').value;
+      var message = document.getElementById('message').value;
 
-      // Build email subject and body
-      const subject = encodeURIComponent('New Contact Form Submission from ' + name);
-      const body = encodeURIComponent(
+      var subject = encodeURIComponent('New Contact Form Submission from ' + name);
+      var body = encodeURIComponent(
         'Name: ' + name + '\n' +
         'Email: ' + email + '\n' +
         'Company: ' + (company || 'Not provided') + '\n\n' +
         'Message:\n' + message
       );
 
-      // Create mailto link
-      const mailtoLink = 'mailto:hello@technous.dev?subject=' + subject + '&body=' + body;
+      window.location.href = 'mailto:hello@technous.dev?subject=' + subject + '&body=' + body;
 
-      // Open email client
-      window.location.href = mailtoLink;
+      var status = document.getElementById('form-status');
+      status.hidden = false;
+      status.textContent = 'Opening your email client. If it doesn\'t open, email us directly at hello@technous.dev';
 
-      // Show success message
-      const statusDiv = document.getElementById('form-status');
-      statusDiv.style.display = 'block';
-      statusDiv.style.color = '#10b981';
-      statusDiv.textContent = 'Opening your email client... If it doesn\'t open, please email us directly at hello@technous.dev';
-
-      // Reset form after a short delay
       setTimeout(function () {
         document.getElementById('contact-form').reset();
       }, 1000);
-    });
-
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    // Scroll Animations
-    const observerOptions = {
-      threshold: 0.1,
-      rootMargin: '0px 0px -50px 0px'
-    };
-
-    // ============================================
-    // CUSTOM SLOW SMOOTH SCROLL
-    // ============================================
-    function smoothScrollTo(element, duration = 1200) {
-      const targetPosition = element.getBoundingClientRect().top + window.pageYOffset;
-      const startPosition = window.pageYOffset;
-      const distance = targetPosition - startPosition;
-      let startTime = null;
-
-      function animation(currentTime) {
-        if (startTime === null) startTime = currentTime;
-        const timeElapsed = currentTime - startTime;
-        const run = ease(timeElapsed, startPosition, distance, duration);
-        window.scrollTo(0, run);
-        if (timeElapsed < duration) requestAnimationFrame(animation);
-      }
-
-      function ease(t, b, c, d) {
-        t /= d / 2;
-        if (t < 1) return c / 2 * t * t + b;
-        t--;
-        return -c / 2 * (t * (t - 2) - 1) + b;
-      }
-
-      requestAnimationFrame(animation);
-    }
-
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        const href = this.getAttribute('href');
-        if (href !== '#' && href.length > 1) {
-          e.preventDefault();
-          const target = document.querySelector(href);
-          if (target) {
-            smoothScrollTo(target, 1500);
-          }
-        }
-      });
-    });
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    }, observerOptions);
-
-    document.querySelectorAll('.fade-in, .scale-in').forEach(el => {
-      observer.observe(el);
-    });
-
-    // Navbar Scroll Effect
-    const nav = document.querySelector('nav');
-    let lastScroll = 0;
-    let ticking = false;
-
-    function updateNavbar() {
-      const currentScroll = window.pageYOffset;
-      if (currentScroll > 50) {
-        nav.classList.add('scrolled');
-      } else {
-        nav.classList.remove('scrolled');
-      }
-      lastScroll = currentScroll;
-      ticking = false;
-    }
-
-    window.addEventListener('scroll', () => {
-      if (!ticking) {
-        window.requestAnimationFrame(updateNavbar);
-        ticking = true;
-      }
-    });
-
-    // ============================================
-    // MOBILE MENU
-    // ============================================
-    const menuToggle = document.querySelector('.menu-toggle');
-    const navLinks = document.querySelector('.nav-links');
-    const navA = document.querySelectorAll('.nav-links a');
-
-    if (menuToggle && navLinks) {
-      menuToggle.addEventListener('click', () => {
-        menuToggle.classList.toggle('active');
-        navLinks.classList.toggle('active');
-        document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
-      });
-
-      navA.forEach(link => {
-        link.addEventListener('click', () => {
-          menuToggle.classList.remove('active');
-          navLinks.classList.remove('active');
-          document.body.style.overflow = '';
-        });
-      });
-    }
-
-    // Mouse Tracking for Cards
-    const cards = document.querySelectorAll('.card');
-    cards.forEach(card => {
-      card.addEventListener('mousemove', (e) => {
-        const rect = card.getBoundingClientRect();
-        const x = ((e.clientX - rect.left) / rect.width) * 100;
-        const y = ((e.clientY - rect.top) / rect.height) * 100;
-        card.style.setProperty('--mouse-x', `${x}%`);
-        card.style.setProperty('--mouse-y', `${y}%`);
-      });
     });
   </script>
 </body>
