@@ -9,11 +9,11 @@
   <link rel="apple-touch-icon" href="assets/images/technous.png">
 
   <!-- SEO & Social Media -->
-  <meta name="description" content="Software crafted end-to-end. Building resilient digital products for bold ideas.">
+  <meta name="description" content="Software crafted end-to-end. Building resilient digital products.">
   <meta name="theme-color" content="#f6f7f9" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#0b0e15" media="(prefers-color-scheme: dark)">
   <meta property="og:title" content="Technous">
-  <meta property="og:description" content="Software crafted end-to-end. Building resilient digital products for bold ideas.">
+  <meta property="og:description" content="Software crafted end-to-end. Building resilient digital products.">
   <meta property="og:image" content="https://technous.dev/assets/images/technous.png">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
@@ -47,14 +47,16 @@
         </div> Technous
       </a>
       <ul class="nav-links">
-        <li><a href="#services">Services</a></li>
-        <li><a href="#products">Products</a></li>
-        <li><a href="#process">Approach</a></li>
-        <li><a href="#industries">Industries</a></li>
-        <li class="mobile-only"><a class="button secondary" href="contact.html">Contact</a></li>
-        <li class="mobile-only"><a class="button primary" href="contact.html">Start a project</a></li>
+        <li><a href="#services" data-i18n="nav.services">Services</a></li>
+        <li><a href="#products" data-i18n="nav.products">Products</a></li>
+        <li><a href="#process" data-i18n="nav.approach">Approach</a></li>
+        <li><a href="#industries" data-i18n="nav.industries">Industries</a></li>
+        <li class="mobile-only"><button class="lang-toggle button secondary" type="button" aria-label="Switch language">TR</button></li>
+        <li class="mobile-only"><a class="button secondary" href="contact.html" data-i18n="nav.contact">Contact</a></li>
+        <li class="mobile-only"><a class="button primary" href="contact.html" data-i18n="nav.start">Start a project</a></li>
       </ul>
       <div class="nav-actions">
+        <button class="lang-toggle" type="button" aria-label="Switch language">TR</button>
         <button class="theme-toggle" type="button" aria-label="Switch between light and dark theme">
           <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"
             stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -67,8 +69,8 @@
             <path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a7 7 0 1 0 10.5 10.5z"></path>
           </svg>
         </button>
-        <a class="button secondary" href="contact.html">Contact</a>
-        <a class="button primary" href="contact.html">Start a project</a>
+        <a class="button secondary" href="contact.html" data-i18n="nav.contact">Contact</a>
+        <a class="button primary" href="contact.html" data-i18n="nav.start">Start a project</a>
       </div>
       <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
         <span></span>
@@ -82,8 +84,8 @@
     <section class="hero">
       <div class="hero-bg" aria-hidden="true"></div>
       <svg class="hero-orbits" viewBox="0 0 800 600" aria-hidden="true">
-        <g transform="rotate(-16 420 300)">
-          <path id="orbit" d="M 50 300 A 370 112 0 1 0 790 300 A 370 112 0 1 0 50 300" opacity="0.7"></path>
+        <g transform="rotate(-9 420 300)">
+          <path id="orbit" d="M 25 300 A 395 86 0 1 0 815 300 A 395 86 0 1 0 25 300" opacity="0.7"></path>
           <circle r="7">
             <animateMotion dur="26s" repeatCount="indefinite" rotate="auto">
               <mpath href="#orbit"></mpath>
@@ -95,20 +97,20 @@
             </animateMotion>
           </circle>
         </g>
-        <path class="orbit-arc" d="M 492 -10 C 560 200, 430 430, 220 590" opacity="0.7"></path>
+        <path class="orbit-arc" d="M 505 -10 C 585 190, 470 420, 230 590" opacity="0.7"></path>
       </svg>
       <div class="hero-inner">
-        <h1>Building resilient digital products for bold ideas.</h1>
-        <p class="hero-description">Technous is a small, senior engineering team. We design, build, and run software
+        <h1 data-i18n="hero.title">Building resilient digital products.</h1>
+        <p class="hero-description" data-i18n="hero.desc">Technous is a small, senior engineering team. We design, build, and run software
           that feels modern, reliable, and truly yours, combining strong engineering with thoughtful product sense.</p>
         <div class="cta-buttons">
-          <a class="button primary large" href="contact.html">Start a project
+          <a class="button primary large" href="contact.html"><span data-i18n="nav.start">Start a project</span>
             <svg class="arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"
               stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <path d="M3 8h10M9 4l4 4-4 4"></path>
             </svg>
           </a>
-          <a class="button secondary large" href="#services">Explore services</a>
+          <a class="button secondary large" href="#services" data-i18n="hero.explore">Explore services</a>
         </div>
       </div>
     </section>
@@ -121,8 +123,8 @@
             <path d="M13 3 5 13.5h6L10.5 21 19 10.5h-6L13 3z"></path>
           </svg>
         </div>
-        <h3>Rapid delivery</h3>
-        <p>Working software in weeks, shipped in tight cycles with QA built in from the start.</p>
+        <h3 data-i18n="feat.1.title">Rapid delivery</h3>
+        <p data-i18n="feat.1.desc">Working software in weeks, shipped in tight cycles with QA built in from the start.</p>
       </div>
       <div class="feature scale-in stagger-2">
         <div class="icon">
@@ -132,8 +134,8 @@
             <path d="m9.5 12 1.8 1.8 3.4-3.6"></path>
           </svg>
         </div>
-        <h3>Security by default</h3>
-        <p>Sensible defaults, least privilege, and reviews at every step so you don't have to think about it.</p>
+        <h3 data-i18n="feat.2.title">Security by default</h3>
+        <p data-i18n="feat.2.desc">Sensible defaults, least privilege, and reviews at every step so you don't have to think about it.</p>
       </div>
       <div class="feature scale-in stagger-3">
         <div class="icon">
@@ -142,8 +144,8 @@
             <path d="M4 19h16M4 19V9M9 19V5M14 19v-8M19 19V3"></path>
           </svg>
         </div>
-        <h3>Built to grow</h3>
-        <p>Architecture that scales with your product instead of against it, from first user to millions.</p>
+        <h3 data-i18n="feat.3.title">Built to grow</h3>
+        <p data-i18n="feat.3.desc">Architecture that scales with your product instead of against it, from first user to millions.</p>
       </div>
       <div class="feature scale-in stagger-4">
         <div class="icon">
@@ -154,8 +156,8 @@
             <path d="M16 6.5a2.6 2.6 0 0 1 0 5.2M17.5 13.5c1.8.5 3 2 3.5 4.5"></path>
           </svg>
         </div>
-        <h3>Senior, end to end</h3>
-        <p>One small team owns discovery, design, build, and launch. No hand-offs, no surprises.</p>
+        <h3 data-i18n="feat.4.title">Senior, end to end</h3>
+        <p data-i18n="feat.4.desc">One small team owns discovery, design, build, and launch. No hand-offs, no surprises.</p>
       </div>
     </div>
 
@@ -165,32 +167,32 @@
           <img src="assets/images/completed.svg" alt="" loading="lazy">
         </div>
         <div class="services-text">
-          <div class="badge">Services</div>
-          <h2>Software crafted end-to-end</h2>
-          <p class="muted">From early concept to full-scale launch, Technous blends creativity with solid engineering so
+          <div class="badge" data-i18n="services.badge">Services</div>
+          <h2 data-i18n="services.title">Software crafted end-to-end</h2>
+          <p class="muted" data-i18n="services.desc">From early concept to full-scale launch, Technous blends creativity with solid engineering so
             your product stays sharp as it grows.</p>
         </div>
       </div>
       <div class="grid">
         <article class="card scale-in stagger-1">
           <div class="icon-circle"><img src="assets/icons/network-wired.svg" alt="" width="22" height="22"></div>
-          <h3>Product engineering</h3>
-          <p>Polished, fast, and reliable web or mobile experiences with clean code and thoughtful UX.</p>
+          <h3 data-i18n="services.1.title">Product engineering</h3>
+          <p data-i18n="services.1.desc">Polished, fast, and reliable web or mobile experiences with clean code and thoughtful UX.</p>
         </article>
         <article class="card scale-in stagger-2">
           <div class="icon-circle"><img src="assets/icons/chart-network.svg" alt="" width="22" height="22"></div>
-          <h3>Product discovery</h3>
-          <p>Clarity early, with research, wireframes, and quick prototypes that validate the right direction.</p>
+          <h3 data-i18n="services.2.title">Product discovery</h3>
+          <p data-i18n="services.2.desc">Clarity early, with research, wireframes, and quick prototypes that validate the right direction.</p>
         </article>
         <article class="card scale-in stagger-3">
           <div class="icon-circle"><img src="assets/icons/cloud.svg" alt="" width="22" height="22"></div>
-          <h3>Cloud &amp; DevOps</h3>
-          <p>From infrastructure-as-code to monitoring, your system stays stable, observable, and easy to deploy.</p>
+          <h3 data-i18n="services.3.title">Cloud &amp; DevOps</h3>
+          <p data-i18n="services.3.desc">From infrastructure-as-code to monitoring, your system stays stable, observable, and easy to deploy.</p>
         </article>
         <article class="card scale-in stagger-4">
           <div class="icon-circle"><img src="assets/icons/code-branch.svg" alt="" width="22" height="22"></div>
-          <h3>Team augmentation</h3>
-          <p>An experienced developer who integrates smoothly with your workflow and ships real progress from day
+          <h3 data-i18n="services.4.title">Team augmentation</h3>
+          <p data-i18n="services.4.desc">An experienced developer who integrates smoothly with your workflow and ships real progress from day
             one.</p>
         </article>
       </div>
@@ -199,10 +201,10 @@
     <section id="products" class="section fade-in">
       <div class="section-header">
         <div>
-          <div class="badge">Products</div>
-          <h2>Products close to our hearts</h2>
+          <div class="badge" data-i18n="products.badge">Products</div>
+          <h2 data-i18n="products.title">Products close to our hearts</h2>
         </div>
-        <p class="muted">We ship our own apps with the same care we bring to client work. It keeps us honest about
+        <p class="muted" data-i18n="products.desc">We ship our own apps with the same care we bring to client work. It keeps us honest about
           what it takes to run a product day to day.</p>
       </div>
       <div class="product-grid">
@@ -211,10 +213,10 @@
             <img src="assets/images/tact-logo.png" alt="Tact logo" width="48" height="48">
             <div>
               <h3>Tact</h3>
-              <span>Say it right, every time</span>
+              <span data-i18n="products.tact.tagline">Say it right, every time</span>
             </div>
           </div>
-          <p>Tact gives your messages the perfect tone and helps your AI prompts work harder. Private by design, your
+          <p data-i18n="products.tact.desc">Tact gives your messages the perfect tone and helps your AI prompts work harder. Private by design, your
             words are never saved.</p>
           <div class="store-badges">
             <a class="store-btn" href="https://tactapp.co" target="_blank" rel="noopener" aria-label="Visit tactapp.co">
@@ -271,10 +273,10 @@
             <img src="assets/images/nimble-logo.png" alt="Nimble logo" width="48" height="48">
             <div>
               <h3>Nimble</h3>
-              <span>The alarm that actually gets you out of bed</span>
+              <span data-i18n="products.nimble.tagline">The alarm that actually gets you out of bed</span>
             </div>
           </div>
-          <p>Pick one of four characters, Mira, Arden, Vexo, or Kai, and wake up to their voice with a fresh message
+          <p data-i18n="products.nimble.desc">Pick one of four characters, Mira, Arden, Vexo, or Kai, and wake up to their voice with a fresh message
             built around your mood, goals, and habits.</p>
           <div class="store-badges">
             <a class="store-btn" href="https://nimbleapp.co" target="_blank" rel="noopener"
@@ -294,7 +296,7 @@
                   d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z" />
               </svg>
               <span class="store-btn-label"><strong>App Store</strong></span>
-              <span class="soon-tag">Soon</span>
+              <span class="soon-tag" data-i18n="products.soon">Soon</span>
             </span>
           </div>
         </article>
@@ -304,9 +306,9 @@
     <section id="process" class="section fade-in">
       <div class="process-split">
         <div class="process-text">
-          <div class="badge">Approach</div>
-          <h2>A workflow that adapts to your needs</h2>
-          <p class="muted">Clear checkpoints, transparent communication, and documentation that makes collaboration
+          <div class="badge" data-i18n="approach.badge">Approach</div>
+          <h2 data-i18n="approach.title">A workflow that adapts to your needs</h2>
+          <p class="muted" data-i18n="approach.desc">Clear checkpoints, transparent communication, and documentation that makes collaboration
             effortless.</p>
           <div class="process-image">
             <img src="assets/images/software-engineer.svg" alt="" loading="lazy">
@@ -317,32 +319,32 @@
             <span class="timeline-number">1</span>
             <div class="timeline-marker"></div>
             <div class="timeline-content">
-              <h4>Shape</h4>
-              <p>Together we define what we're building and how success looks, without overcomplicating it.</p>
+              <h4 data-i18n="approach.1.title">Shape</h4>
+              <p data-i18n="approach.1.desc">Together we define what we're building and how success looks, without overcomplicating it.</p>
             </div>
           </div>
           <div class="timeline-step scale-in stagger-2">
             <span class="timeline-number">2</span>
             <div class="timeline-marker"></div>
             <div class="timeline-content">
-              <h4>Build</h4>
-              <p>Design and development in tight, focused cycles with QA baked into every step.</p>
+              <h4 data-i18n="approach.2.title">Build</h4>
+              <p data-i18n="approach.2.desc">Design and development in tight, focused cycles with QA baked into every step.</p>
             </div>
           </div>
           <div class="timeline-step scale-in stagger-3">
             <span class="timeline-number">3</span>
             <div class="timeline-marker"></div>
             <div class="timeline-content">
-              <h4>Launch</h4>
-              <p>A smooth rollout with checklists, monitoring, and support during the critical phase.</p>
+              <h4 data-i18n="approach.3.title">Launch</h4>
+              <p data-i18n="approach.3.desc">A smooth rollout with checklists, monitoring, and support during the critical phase.</p>
             </div>
           </div>
           <div class="timeline-step scale-in stagger-4">
             <span class="timeline-number">4</span>
             <div class="timeline-marker"></div>
             <div class="timeline-content">
-              <h4>Optimize</h4>
-              <p>Refining the product with real data, experiments, and performance improvements.</p>
+              <h4 data-i18n="approach.4.title">Optimize</h4>
+              <p data-i18n="approach.4.desc">Refining the product with real data, experiments, and performance improvements.</p>
             </div>
           </div>
         </div>
@@ -352,28 +354,28 @@
     <section id="industries" class="section fade-in">
       <div class="section-header">
         <div>
-          <div class="badge">Industries</div>
-          <h2>Expertise that travels well</h2>
+          <div class="badge" data-i18n="industries.badge">Industries</div>
+          <h2 data-i18n="industries.title">Expertise that travels well</h2>
         </div>
-        <p class="muted">We help teams in SaaS, AI, healthcare, and other fast-moving industries build dependable
+        <p class="muted" data-i18n="industries.desc">We help teams in SaaS, AI, healthcare, and other fast-moving industries build dependable
           products without slowing down.</p>
       </div>
       <div class="industry-grid">
         <article class="card scale-in stagger-1">
-          <h4>SaaS &amp; platforms</h4>
-          <p>Multi-tenant systems, usage analytics, and billing that scales naturally.</p>
+          <h4 data-i18n="industries.1.title">SaaS &amp; platforms</h4>
+          <p data-i18n="industries.1.desc">Multi-tenant systems, usage analytics, and billing that scales naturally.</p>
         </article>
         <article class="card scale-in stagger-2">
-          <h4>AI &amp; automation</h4>
-          <p>Human-centered AI tools, LLM workflows, and reliable evaluation setups.</p>
+          <h4 data-i18n="industries.2.title">AI &amp; automation</h4>
+          <p data-i18n="industries.2.desc">Human-centered AI tools, LLM workflows, and reliable evaluation setups.</p>
         </article>
         <article class="card scale-in stagger-3">
-          <h4>Mobile apps</h4>
-          <p>Clear, consistent mobile experiences with strong data practices and smooth performance.</p>
+          <h4 data-i18n="industries.3.title">Mobile apps</h4>
+          <p data-i18n="industries.3.desc">Clear, consistent mobile experiences with strong data practices and smooth performance.</p>
         </article>
         <article class="card scale-in stagger-4">
-          <h4>Industrial IT</h4>
-          <p>Specialized systems for manufacturing, logistics, and industrial monitoring and control.</p>
+          <h4 data-i18n="industries.4.title">Industrial IT</h4>
+          <p data-i18n="industries.4.desc">Specialized systems for manufacturing, logistics, and industrial monitoring and control.</p>
         </article>
       </div>
     </section>
@@ -381,18 +383,18 @@
     <section class="cta-band fade-in">
       <div class="cta-inner">
         <div>
-          <div class="badge">Let's build</div>
-          <h2>Bring your next release to Technous</h2>
-          <p class="muted">Share your roadmap and we'll turn it into a clear plan with milestones and a dedicated
+          <div class="badge" data-i18n="cta.badge">Let's build</div>
+          <h2 data-i18n="cta.title">Bring your next release to Technous</h2>
+          <p class="muted" data-i18n="cta.desc">Share your roadmap and we'll turn it into a clear plan with milestones and a dedicated
             execution approach.</p>
           <div class="cta-buttons">
-            <a class="button primary large" href="contact.html">Reach us now
+            <a class="button primary large" href="contact.html"><span data-i18n="cta.reach">Reach us now</span>
               <svg class="arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"
                 stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M3 8h10M9 4l4 4-4 4"></path>
               </svg>
             </a>
-            <a class="button secondary large" href="terms.html">Review our terms</a>
+            <a class="button secondary large" href="terms.html" data-i18n="cta.terms">Review our terms</a>
           </div>
         </div>
         <div class="cta-image">
@@ -409,18 +411,19 @@
           <img src="assets/images/technous-mark.png" alt="" class="logo-mark-img" loading="lazy">
         </div>
         <div>
-          <span>© <span id="year"></span> Technous LTD. Built with care.</span>
+          <span>© <span id="year"></span> <span data-i18n="footer.tagline">Technous LTD. Built with care.</span></span>
           <span class="footer-address">71-75 Shelton Street, Covent Garden, London, United Kingdom</span>
         </div>
       </div>
       <ul class="footer-links">
-        <li><a href="privacy.html">Privacy policy</a></li>
-        <li><a href="terms.html">Terms &amp; conditions</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="privacy.html" data-i18n="footer.privacy">Privacy policy</a></li>
+        <li><a href="terms.html" data-i18n="footer.terms">Terms &amp; conditions</a></li>
+        <li><a href="contact.html" data-i18n="footer.contact">Contact</a></li>
       </ul>
     </div>
   </footer>
 
+  <script src="assets/js/i18n.js"></script>
   <script src="assets/js/site.js"></script>
 </body>
 

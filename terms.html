@@ -29,14 +29,16 @@
         </div> Technous
       </a>
       <ul class="nav-links">
-        <li><a href="index.html#services">Services</a></li>
-        <li><a href="index.html#products">Products</a></li>
-        <li><a href="index.html#process">Approach</a></li>
-        <li><a href="index.html#industries">Industries</a></li>
-        <li class="mobile-only"><a class="button secondary" href="contact.html">Contact</a></li>
-        <li class="mobile-only"><a class="button primary" href="contact.html">Start a project</a></li>
+        <li><a href="index.html#services" data-i18n="nav.services">Services</a></li>
+        <li><a href="index.html#products" data-i18n="nav.products">Products</a></li>
+        <li><a href="index.html#process" data-i18n="nav.approach">Approach</a></li>
+        <li><a href="index.html#industries" data-i18n="nav.industries">Industries</a></li>
+        <li class="mobile-only"><button class="lang-toggle button secondary" type="button" aria-label="Switch language">TR</button></li>
+        <li class="mobile-only"><a class="button secondary" href="contact.html" data-i18n="nav.contact">Contact</a></li>
+        <li class="mobile-only"><a class="button primary" href="contact.html" data-i18n="nav.start">Start a project</a></li>
       </ul>
       <div class="nav-actions">
+        <button class="lang-toggle" type="button" aria-label="Switch language">TR</button>
         <button class="theme-toggle" type="button" aria-label="Switch between light and dark theme">
           <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"
             stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -49,8 +51,8 @@
             <path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a7 7 0 1 0 10.5 10.5z"></path>
           </svg>
         </button>
-        <a class="button secondary" href="contact.html">Contact</a>
-        <a class="button primary" href="contact.html">Start a project</a>
+        <a class="button secondary" href="contact.html" data-i18n="nav.contact">Contact</a>
+        <a class="button primary" href="contact.html" data-i18n="nav.start">Start a project</a>
       </div>
       <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
         <span></span>
@@ -396,18 +398,19 @@
           <img src="assets/images/technous-mark.png" alt="" class="logo-mark-img" loading="lazy">
         </div>
         <div>
-          <span>© <span id="year"></span> Technous LTD. Built with care.</span>
+          <span>© <span id="year"></span> <span data-i18n="footer.tagline">Technous LTD. Built with care.</span></span>
           <span class="footer-address">71-75 Shelton Street, Covent Garden, London, United Kingdom</span>
         </div>
       </div>
       <ul class="footer-links">
-        <li><a href="privacy.html">Privacy policy</a></li>
-        <li><a href="terms.html">Terms &amp; conditions</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="privacy.html" data-i18n="footer.privacy">Privacy policy</a></li>
+        <li><a href="terms.html" data-i18n="footer.terms">Terms &amp; conditions</a></li>
+        <li><a href="contact.html" data-i18n="footer.contact">Contact</a></li>
       </ul>
     </div>
   </footer>
 
+  <script src="assets/js/i18n.js"></script>
   <script src="assets/js/site.js"></script>
 </body>
 

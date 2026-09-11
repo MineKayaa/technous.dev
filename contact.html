@@ -29,14 +29,16 @@
         </div> Technous
       </a>
       <ul class="nav-links">
-        <li><a href="index.html#services">Services</a></li>
-        <li><a href="index.html#products">Products</a></li>
-        <li><a href="index.html#process">Approach</a></li>
-        <li><a href="index.html#industries">Industries</a></li>
-        <li class="mobile-only"><a class="button secondary" href="contact.html">Contact</a></li>
-        <li class="mobile-only"><a class="button primary" href="contact.html">Start a project</a></li>
+        <li><a href="index.html#services" data-i18n="nav.services">Services</a></li>
+        <li><a href="index.html#products" data-i18n="nav.products">Products</a></li>
+        <li><a href="index.html#process" data-i18n="nav.approach">Approach</a></li>
+        <li><a href="index.html#industries" data-i18n="nav.industries">Industries</a></li>
+        <li class="mobile-only"><button class="lang-toggle button secondary" type="button" aria-label="Switch language">TR</button></li>
+        <li class="mobile-only"><a class="button secondary" href="contact.html" data-i18n="nav.contact">Contact</a></li>
+        <li class="mobile-only"><a class="button primary" href="contact.html" data-i18n="nav.start">Start a project</a></li>
       </ul>
       <div class="nav-actions">
+        <button class="lang-toggle" type="button" aria-label="Switch language">TR</button>
         <button class="theme-toggle" type="button" aria-label="Switch between light and dark theme">
           <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"
             stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -49,8 +51,8 @@
             <path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a7 7 0 1 0 10.5 10.5z"></path>
           </svg>
         </button>
-        <a class="button secondary" href="contact.html">Contact</a>
-        <a class="button primary" href="contact.html">Start a project</a>
+        <a class="button secondary" href="contact.html" data-i18n="nav.contact">Contact</a>
+        <a class="button primary" href="contact.html" data-i18n="nav.start">Start a project</a>
       </div>
       <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
         <span></span>
@@ -63,9 +65,9 @@
   <main class="section fade-in">
     <div class="contact-header">
       <div class="contact-header-text">
-        <div class="badge">Contact</div>
-        <h1>Let's talk about your next release</h1>
-        <p class="muted">Share your goals, timeline, and the challenges you want to solve. We respond within one
+        <div class="badge" data-i18n="contact.badge">Contact</div>
+        <h1 data-i18n="contact.title">Let's talk about your next release</h1>
+        <p class="muted" data-i18n="contact.desc">Share your goals, timeline, and the challenges you want to solve. We respond within one
           business day.</p>
       </div>
       <div class="contact-header-image">
@@ -75,46 +77,44 @@
 
     <div class="contact-grid">
       <article class="card form-card scale-in stagger-1">
-        <h3>Project inquiry</h3>
+        <h3 data-i18n="contact.form.title">Project inquiry</h3>
         <form id="contact-form">
           <label>
-            <span>Full name</span>
+            <span data-i18n="contact.form.name">Full name</span>
             <input class="input" type="text" name="name" id="name" placeholder="Thomas Anderson" required>
           </label>
           <label>
-            <span>Work email</span>
+            <span data-i18n="contact.form.email">Work email</span>
             <input class="input" type="email" name="email" id="email" placeholder="thomas@company.com" required>
           </label>
           <label>
-            <span>Company</span>
-            <input class="input" type="text" name="company" id="company" placeholder="Company name">
+            <span data-i18n="contact.form.company">Company</span>
+            <input class="input" type="text" name="company" id="company" placeholder="Company name" data-i18n-placeholder="contact.form.company">
           </label>
           <label>
-            <span>How can we help?</span>
+            <span data-i18n="contact.form.message">How can we help?</span>
             <textarea class="input" name="message" id="message"
-              placeholder="Product build, platform modernization, or team augmentation details"></textarea>
+              placeholder="Product build, platform modernization, or team augmentation details" data-i18n-placeholder="contact.form.message"></textarea>
           </label>
-          <button class="button primary large" type="submit">Send message</button>
+          <button class="button primary large" type="submit" data-i18n="contact.form.send">Send message</button>
           <div id="form-status" hidden></div>
         </form>
       </article>
 
       <article class="card contact-info-card scale-in stagger-2">
-        <h3>Quick details</h3>
-        <p class="muted">Prefer to email us directly? Reach out and we'll route your note to the right product lead.</p>
+        <h3 data-i18n="contact.details.title">Quick details</h3>
+        <p class="muted" data-i18n="contact.details.desc">Prefer to email us directly? Reach out and we'll route your note to the right product lead.</p>
         <div class="pill-group">
           <a class="pill" href="mailto:hello@technous.dev"><img src="assets/icons/mail.svg" alt="" width="14"
               height="14"> hello@technous.dev</a>
-          <span class="pill"><img src="assets/icons/mobile-signal.svg" width="14" height="14" alt=""> Remote-first,
-            GMT core hours</span>
-          <span class="pill"><img src="assets/icons/arrow-rotate-right-24.svg" width="14" height="14" alt="">
-            Response within 1 business day</span>
+          <span class="pill"><img src="assets/icons/mobile-signal.svg" width="14" height="14" alt=""> <span data-i18n="contact.details.remote">Remote-first, GMT core hours</span></span>
+          <span class="pill"><img src="assets/icons/arrow-rotate-right-24.svg" width="14" height="14" alt=""> <span data-i18n="contact.details.response">Response within 1 business day</span></span>
         </div>
-        <h4>What to include</h4>
+        <h4 data-i18n="contact.include.title">What to include</h4>
         <ul>
-          <li>Project goals and deadlines</li>
-          <li>Key platforms (web, mobile, cloud)</li>
-          <li>Budget guardrails and team size</li>
+          <li data-i18n="contact.include.1">Project goals and deadlines</li>
+          <li data-i18n="contact.include.2">Key platforms (web, mobile, cloud)</li>
+          <li data-i18n="contact.include.3">Budget guardrails and team size</li>
         </ul>
       </article>
     </div>
@@ -127,18 +127,19 @@
           <img src="assets/images/technous-mark.png" alt="" class="logo-mark-img" loading="lazy">
         </div>
         <div>
-          <span>© <span id="year"></span> Technous LTD. Built with care.</span>
+          <span>© <span id="year"></span> <span data-i18n="footer.tagline">Technous LTD. Built with care.</span></span>
           <span class="footer-address">71-75 Shelton Street, Covent Garden, London, United Kingdom</span>
         </div>
       </div>
       <ul class="footer-links">
-        <li><a href="privacy.html">Privacy policy</a></li>
-        <li><a href="terms.html">Terms &amp; conditions</a></li>
-        <li><a href="index.html">Home</a></li>
+        <li><a href="privacy.html" data-i18n="footer.privacy">Privacy policy</a></li>
+        <li><a href="terms.html" data-i18n="footer.terms">Terms &amp; conditions</a></li>
+        <li><a href="index.html" data-i18n="footer.home">Home</a></li>
       </ul>
     </div>
   </footer>
 
+  <script src="assets/js/i18n.js"></script>
   <script src="assets/js/site.js"></script>
   <script>
     // The form opens the visitor's mail client with the message prefilled.
@@ -162,7 +163,9 @@
 
       var status = document.getElementById('form-status');
       status.hidden = false;
-      status.textContent = 'Opening your email client. If it doesn\'t open, email us directly at hello@technous.dev';
+      status.textContent = window.siteLang && window.siteLang() === 'tr'
+        ? window.siteText('contact.status')
+        : 'Opening your email client. If it doesn\'t open, email us directly at hello@technous.dev';
 
       setTimeout(function () {
         document.getElementById('contact-form').reset();

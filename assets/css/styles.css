@@ -395,6 +395,35 @@ nav.scrolled {
   background: var(--hover-bg);
 }
 
+/* Language toggle */
+.lang-toggle {
+  height: 38px;
+  min-width: 38px;
+  padding: 0 8px;
+  border-radius: var(--radius-sm);
+  border: 1px solid transparent;
+  background: transparent;
+  color: var(--muted);
+  font: inherit;
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  transition: color var(--transition-fast), background var(--transition-fast);
+}
+
+.lang-toggle:hover {
+  color: var(--text);
+  background: var(--hover-bg);
+}
+
+.nav-links .mobile-only .lang-toggle {
+  width: 100%;
+  height: auto;
+  color: var(--text);
+  border-color: var(--line-strong);
+}
+
 /* Theme toggle */
 .theme-toggle {
   width: 38px;
@@ -486,9 +515,9 @@ nav.scrolled {
 
 .hero-orbits {
   position: absolute;
-  right: -6%;
+  right: -13%;
   top: 50%;
-  width: min(62vw, 900px);
+  width: min(60vw, 880px);
   height: auto;
   transform: translateY(-50%);
   pointer-events: none;
@@ -1407,7 +1436,8 @@ textarea.input {
     display: flex;
   }
 
-  .nav-actions .button {
+  .nav-actions .button,
+  .nav-actions .lang-toggle {
     display: none;
   }
 
