@@ -521,8 +521,7 @@ nav.scrolled {
   height: auto;
   transform: translateY(-50%);
   pointer-events: none;
-  opacity: 0;
-  animation: orbits-in 1.6s var(--ease) 0.2s forwards;
+  opacity: 1;
 }
 
 .hero-orbits ellipse,
