@@ -331,6 +331,11 @@ nav.scrolled {
   margin-left: auto;
 }
 
+.nav-actions .button {
+  padding: 9px 16px;
+  font-size: 0.9rem;
+}
+
 .menu-toggle {
   display: none;
   flex-direction: column;
@@ -393,6 +398,28 @@ nav.scrolled {
 .button.secondary:hover {
   border-color: var(--line-strong);
   background: var(--hover-bg);
+}
+
+.button.accent {
+  background: var(--deep-blue);
+  color: #fff;
+  border-color: var(--deep-blue);
+}
+
+.button.accent:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
+.button.muted-dark {
+  background: #2a3140;
+  color: #fff;
+  border-color: #2a3140;
+}
+
+.button.muted-dark:hover {
+  background: #394253;
+  border-color: #394253;
 }
 
 /* Language toggle */
@@ -550,6 +577,7 @@ nav.scrolled {
 .hero-inner h1 {
   font-size: clamp(2.5rem, 4.6vw, 3.7rem);
   font-weight: 400;
+  color: var(--muted);
   line-height: 1.12;
   letter-spacing: -0.025em;
   margin: 0 0 24px;
@@ -576,6 +604,30 @@ nav.scrolled {
 .hero .cta-buttons {
   opacity: 0;
   animation: rise-in 0.9s var(--ease) 0.35s forwards;
+}
+
+.products-cta-row {
+  flex-basis: 100%;
+}
+
+.hero .button.muted-dark {
+  background: rgba(42, 49, 64, 0.8);
+  border-color: rgba(42, 49, 64, 0.8);
+}
+
+.hero .button.muted-dark:hover {
+  background: rgba(57, 66, 83, 0.9);
+  border-color: rgba(57, 66, 83, 0.9);
+}
+
+.hero .button.accent {
+  background: rgba(74, 112, 169, 0.8);
+  border-color: rgba(74, 112, 169, 0.8);
+}
+
+.hero .button.accent:hover {
+  background: rgba(143, 171, 212, 0.9);
+  border-color: rgba(143, 171, 212, 0.9);
 }
 
 @keyframes rise-in {

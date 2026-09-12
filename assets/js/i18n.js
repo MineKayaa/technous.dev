@@ -9,9 +9,10 @@
     'nav.contact': 'İletişim',
     'nav.start': 'Proje başlat',
 
-    'hero.title': 'Dayanıklı dijital ürünler inşa ediyoruz.',
+    'hero.title': 'Dayanıklı <em>dijital ürünler</em> inşa ediyoruz.',
     'hero.desc': 'Technous küçük ve deneyimli bir mühendislik ekibidir. Güçlü mühendisliği özenli ürün anlayışıyla birleştirerek modern, güvenilir ve gerçekten size ait hissettiren yazılımlar tasarlar, geliştirir ve işletiriz.',
     'hero.explore': 'Hizmetleri keşfet',
+    'hero.products': 'Ürünlerimizi görün',
 
     'feat.1.title': 'Hızlı teslimat',
     'feat.1.desc': 'Haftalar içinde çalışan yazılım; en baştan kalite güvencesiyle, sıkı döngülerle teslim.',
@@ -108,7 +109,8 @@
   var placeholderNodes = document.querySelectorAll('[data-i18n-placeholder]');
 
   textNodes.forEach(function (el) {
-    EN[el.getAttribute('data-i18n')] = el.textContent.trim().replace(/\s+/g, ' ');
+    var value = el.hasAttribute('data-i18n-html') ? el.innerHTML : el.textContent;
+    EN[el.getAttribute('data-i18n')] = value.trim().replace(/\s+/g, ' ');
   });
   placeholderNodes.forEach(function (el) {
     EN['ph.' + el.getAttribute('data-i18n-placeholder')] = el.getAttribute('placeholder') || '';
@@ -118,7 +120,10 @@
     var dict = lang === 'tr' ? TR : EN;
     textNodes.forEach(function (el) {
       var value = dict[el.getAttribute('data-i18n')];
-      if (value != null) el.textContent = value;
+      if (value != null) {
+        if (el.hasAttribute('data-i18n-html')) el.innerHTML = value;
+        else el.textContent = value;
+      }
     });
     placeholderNodes.forEach(function (el) {
       var value = dict['ph.' + el.getAttribute('data-i18n-placeholder')];
