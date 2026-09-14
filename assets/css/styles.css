@@ -468,6 +468,12 @@ nav.scrolled {
   box-shadow: 0 8px 22px var(--shadow);
 }
 
+/* .lang-menu sets display:flex, which outranks the user-agent [hidden] rule,
+   so the menu needs to opt back out explicitly when the JS closes it. */
+.lang-menu[hidden] {
+  display: none;
+}
+
 .lang-menu button {
   padding: 7px 10px;
   border: 0;
