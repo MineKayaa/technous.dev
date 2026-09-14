@@ -33,12 +33,27 @@
         <li><a href="index.html#process" data-i18n="nav.approach">Approach</a></li>
         <li><a href="index.html#industries" data-i18n="nav.industries">Industries</a></li>
         <li><a href="index.html#services" data-i18n="nav.services">Services</a></li>
-        <li class="mobile-only"><button class="lang-toggle button secondary" type="button" aria-label="Switch language">TR</button></li>
+        <li class="mobile-only">
+          <div class="lang-options" role="radiogroup" aria-label="Language">
+            <button type="button" role="radio" aria-checked="false" data-lang="en">EN</button>
+            <button type="button" role="radio" aria-checked="false" data-lang="tr">TR</button>
+            <button type="button" role="radio" aria-checked="false" data-lang="de">DE</button>
+          </div>
+        </li>
         <li class="mobile-only"><a class="button secondary" href="contact.html" data-i18n="nav.contact">Contact</a></li>
         <li class="mobile-only"><a class="button primary" href="contact.html" data-i18n="nav.start">Start a project</a></li>
       </ul>
       <div class="nav-actions">
-        <button class="lang-toggle" type="button" aria-label="Switch language">TR</button>
+        <div class="lang-switch">
+          <button class="lang-trigger" type="button" aria-haspopup="true" aria-expanded="false" aria-label="Change language">
+            <span class="lang-current">EN</span>
+          </button>
+          <div class="lang-menu" role="radiogroup" aria-label="Language" hidden>
+            <button type="button" role="radio" aria-checked="false" data-lang="en">English</button>
+            <button type="button" role="radio" aria-checked="false" data-lang="tr">Türkçe</button>
+            <button type="button" role="radio" aria-checked="false" data-lang="de">Deutsch</button>
+          </div>
+        </div>
         <button class="theme-toggle" type="button" aria-label="Switch between light and dark theme">
           <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"
             stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">

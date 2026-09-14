@@ -324,6 +324,10 @@ nav.scrolled {
   background: var(--hover-bg);
 }
 
+.nav-links .mobile-only {
+  display: none;
+}
+
 .nav-actions {
   display: flex;
   align-items: center;
@@ -422,8 +426,12 @@ nav.scrolled {
   border-color: #394253;
 }
 
-/* Language toggle */
-.lang-toggle {
+/* Language switcher */
+.lang-switch {
+  position: relative;
+}
+
+.lang-trigger {
   height: 38px;
   min-width: 38px;
   padding: 0 8px;
@@ -439,16 +447,78 @@ nav.scrolled {
   transition: color var(--transition-fast), background var(--transition-fast);
 }
 
-.lang-toggle:hover {
+.lang-trigger:hover,
+.lang-trigger[aria-expanded="true"] {
   color: var(--text);
   background: var(--hover-bg);
 }
 
-.nav-links .mobile-only .lang-toggle {
-  width: 100%;
-  height: auto;
+.lang-menu {
+  position: absolute;
+  top: calc(100% + 6px);
+  right: 0;
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+  min-width: 124px;
+  padding: 4px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--bg-elev);
+  box-shadow: 0 8px 22px var(--shadow);
+}
+
+.lang-menu button {
+  padding: 7px 10px;
+  border: 0;
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: var(--muted);
+  font: inherit;
+  font-size: 0.86rem;
+  text-align: left;
+  cursor: pointer;
+  transition: color var(--transition-fast), background var(--transition-fast);
+}
+
+.lang-menu button:hover,
+.lang-menu button:focus-visible {
   color: var(--text);
-  border-color: var(--line-strong);
+  background: var(--hover-bg);
+}
+
+.lang-menu button.is-active {
+  color: var(--text);
+  font-weight: 500;
+}
+
+/* Inline language options inside the mobile nav */
+.lang-options {
+  display: flex;
+  gap: 6px;
+  width: 100%;
+}
+
+.lang-options button {
+  flex: 1;
+  padding: 10px 0;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: var(--muted);
+  font: inherit;
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  transition: color var(--transition-fast), background var(--transition-fast),
+    border-color var(--transition-fast);
+}
+
+.lang-options button.is-active {
+  color: var(--text);
+  border-color: var(--text);
+  background: var(--hover-bg);
 }
 
 /* Theme toggle */
@@ -1492,7 +1562,7 @@ textarea.input {
   }
 
   .nav-actions .button,
-  .nav-actions .lang-toggle {
+  .nav-actions .lang-switch {
     display: none;
   }
 
@@ -1657,9 +1727,6 @@ textarea.input {
   }
 }
 
-.nav-links .mobile-only {
-  display: none;
-}
 
 /* ------------------------------------------------------------
    Accessibility
