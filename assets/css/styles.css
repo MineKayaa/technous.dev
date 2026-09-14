@@ -13,10 +13,10 @@
   --text: #14181f;
   --muted: #5b6472;
   --faint: #8a929e;
-  --soft-blue: #8fabd4;
-  --deep-blue: #4a70a9;
-  --ink-blue: #1c2f52;
-  --accent: #4a70a9;
+  --soft-blue: #8ea2eb;
+  --deep-blue: #4166f5;
+  --ink-blue: #16255a;
+  --accent: #4166f5;
   --btn-bg: #14181f;
   --btn-bg-hover: #2a3140;
   --btn-text: #ffffff;
@@ -25,11 +25,11 @@
   --shadow: rgba(20, 30, 50, 0.08);
   --logo-filter: brightness(0.5);
   --icon-filter: none;
-  --hero-wash-1: rgba(143, 171, 212, 0.32);
-  --hero-wash-2: rgba(74, 112, 169, 0.16);
-  --hero-wash-3: rgba(143, 171, 212, 0.14);
-  --band-wash: rgba(143, 171, 212, 0.28);
-  --selection: rgba(143, 171, 212, 0.4);
+  --hero-wash-1: rgba(142, 162, 235, 0.32);
+  --hero-wash-2: rgba(65, 102, 245, 0.16);
+  --hero-wash-3: rgba(142, 162, 235, 0.14);
+  --band-wash: rgba(142, 162, 235, 0.28);
+  --selection: rgba(142, 162, 235, 0.4);
   --container: 1200px;
   --gutter: 40px;
   --radius-sm: 6px;
@@ -53,7 +53,7 @@
     --text: #eef1f6;
     --muted: #9aa3b2;
     --faint: #6b7483;
-    --accent: #8fabd4;
+    --accent: #7491fb;
     --btn-bg: #f4f6fa;
     --btn-bg-hover: #ffffff;
     --btn-text: #0b0f18;
@@ -62,11 +62,11 @@
     --shadow: rgba(0, 0, 0, 0.35);
     --logo-filter: brightness(1.6);
     --icon-filter: invert(1);
-    --hero-wash-1: rgba(74, 112, 169, 0.3);
-    --hero-wash-2: rgba(28, 47, 82, 0.6);
-    --hero-wash-3: rgba(28, 47, 82, 0.25);
-    --band-wash: rgba(74, 112, 169, 0.24);
-    --selection: rgba(143, 171, 212, 0.35);
+    --hero-wash-1: rgba(65, 102, 245, 0.3);
+    --hero-wash-2: rgba(22, 37, 90, 0.6);
+    --hero-wash-3: rgba(22, 37, 90, 0.25);
+    --band-wash: rgba(65, 102, 245, 0.24);
+    --selection: rgba(142, 162, 235, 0.35);
   }
 }
 
@@ -80,7 +80,7 @@
   --text: #eef1f6;
   --muted: #9aa3b2;
   --faint: #6b7483;
-  --accent: #8fabd4;
+  --accent: #7491fb;
   --btn-bg: #f4f6fa;
   --btn-bg-hover: #ffffff;
   --btn-text: #0b0f18;
@@ -89,11 +89,11 @@
   --shadow: rgba(0, 0, 0, 0.35);
   --logo-filter: brightness(1.6);
   --icon-filter: invert(1);
-  --hero-wash-1: rgba(74, 112, 169, 0.3);
-  --hero-wash-2: rgba(28, 47, 82, 0.6);
-  --hero-wash-3: rgba(28, 47, 82, 0.25);
-  --band-wash: rgba(74, 112, 169, 0.24);
-  --selection: rgba(143, 171, 212, 0.35);
+  --hero-wash-1: rgba(65, 102, 245, 0.3);
+  --hero-wash-2: rgba(22, 37, 90, 0.6);
+  --hero-wash-3: rgba(22, 37, 90, 0.25);
+  --band-wash: rgba(65, 102, 245, 0.24);
+  --selection: rgba(142, 162, 235, 0.35);
 }
 
 * {
@@ -222,8 +222,8 @@ textarea:focus-visible {
   font-size: 0.78rem;
   font-weight: 500;
   color: var(--accent);
-  background: rgba(143, 171, 212, 0.14);
-  border: 1px solid rgba(74, 112, 169, 0.18);
+  background: rgba(142, 162, 235, 0.14);
+  border: 1px solid rgba(65, 102, 245, 0.18);
   border-radius: 999px;
   padding: 5px 12px;
   margin-bottom: 18px;
@@ -697,13 +697,13 @@ nav.scrolled {
 }
 
 .hero .button.accent {
-  background: rgba(74, 112, 169, 0.8);
-  border-color: rgba(74, 112, 169, 0.8);
+  background: rgba(65, 102, 245, 0.8);
+  border-color: rgba(65, 102, 245, 0.8);
 }
 
 .hero .button.accent:hover {
-  background: rgba(143, 171, 212, 0.9);
-  border-color: rgba(143, 171, 212, 0.9);
+  background: rgba(142, 162, 235, 0.9);
+  border-color: rgba(142, 162, 235, 0.9);
 }
 
 @keyframes rise-in {
@@ -888,7 +888,7 @@ nav.scrolled {
 }
 
 .product:hover {
-  border-color: rgba(74, 112, 169, 0.4);
+  border-color: rgba(65, 102, 245, 0.4);
   transform: translateY(-4px);
   box-shadow: 0 12px 32px var(--shadow);
 }
@@ -982,7 +982,7 @@ nav.scrolled {
 .soon-tag {
   font-size: 0.7rem;
   color: var(--accent);
-  border: 1px solid rgba(143, 171, 212, 0.35);
+  border: 1px solid rgba(142, 162, 235, 0.35);
   border-radius: 999px;
   padding: 1px 7px;
   margin-left: 2px;
@@ -1070,7 +1070,7 @@ nav.scrolled {
 }
 
 .timeline-content:hover {
-  border-color: rgba(74, 112, 169, 0.4);
+  border-color: rgba(65, 102, 245, 0.4);
   box-shadow: 0 8px 24px var(--shadow);
   transform: translateX(6px);
 }
@@ -1400,7 +1400,7 @@ footer {
   outline: none;
   border-color: var(--deep-blue);
   background: var(--bg-elev);
-  box-shadow: 0 0 0 3px rgba(74, 112, 169, 0.12);
+  box-shadow: 0 0 0 3px rgba(65, 102, 245, 0.12);
 }
 
 textarea.input {
