@@ -647,13 +647,12 @@ nav.scrolled {
 }
 
 .hero-inner h1 {
-  font-size: clamp(2.5rem, 4.6vw, 3.7rem);
+  font-size: clamp(2.2rem, 4vw, 3.25rem);
   font-weight: 400;
   color: var(--muted);
   line-height: 1.12;
   letter-spacing: -0.025em;
   margin: 0 0 24px;
-  max-width: 18ch;
   opacity: 0;
   animation: rise-in 0.9s var(--ease) 0.05s forwards;
 }
