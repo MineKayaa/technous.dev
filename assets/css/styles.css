@@ -212,6 +212,14 @@ textarea:focus-visible {
   padding-bottom: 6px;
 }
 
+.section-header.single {
+  grid-template-columns: 1fr;
+}
+
+.section-header.single h2 {
+  max-width: none;
+}
+
 /* Small label pill */
 .badge {
   display: inline-block;

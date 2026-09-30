@@ -7,7 +7,7 @@
     'nav.work': 'Birlikte çalışalım',
     'nav.contact': 'İletişim',
 
-    'hero.title': 'Küçük uygulamalar, <em>özenle yapılmış.</em>',
+    'hero.title': 'Her güne uygulamalar, <em>özenle yapılmış.</em>',
     'hero.desc': 'Technous bağımsız bir uygulama stüdyosudur. Kendi uygulamalarımızı tasarlar, geliştirir ve işletiriz: tek bir işi iyi yapan, gizliliğinize saygı duyan ve her gün kullanması keyifli, odaklı araçlar.',
     'hero.apps': 'Uygulamalarımızı görün',
     'hero.studio': 'Nasıl geliştiriyoruz',
@@ -16,8 +16,7 @@
     'hero.apps.skye': 'Astroloji arkadaşı',
 
     'apps.badge': 'Uygulamalarımız',
-    'apps.title': 'Geliştirdiğimiz, yayınladığımız ve her gün kullandığımız uygulamalar',
-    'apps.desc': 'Her biri baştan sona bizim tarafımızdan tasarlanır, geliştirilir ve desteklenir. Şimdiye kadar üç uygulama, fazlası yolda.',
+    'apps.title': 'Geliştirdiğimiz ve her gün kullandığımız uygulamalar',
     'products.tact.tagline': 'Her seferinde doğru söyleyin',
     'products.tact.desc': 'Tact mesajlarınıza doğru tonu verir ve yapay zeka komutlarınızı daha etkili hale getirir. Tasarımı gereği gizli; sözleriniz asla kaydedilmez.',
     'products.nimble.tagline': 'Sabah koçun',
@@ -87,7 +86,7 @@
     'nav.work': 'Zusammenarbeit',
     'nav.contact': 'Kontakt',
 
-    'hero.title': 'Kleine Apps, <em>mit Sorgfalt gemacht.</em>',
+    'hero.title': 'Apps für jeden Tag, <em>mit Sorgfalt gemacht.</em>',
     'hero.desc': 'Technous ist ein unabhängiges App-Studio. Wir entwerfen, entwickeln und betreiben unsere eigenen Apps: fokussierte Werkzeuge, die eine Sache gut machen, Ihre Privatsphäre respektieren und sich jeden Tag gut anfühlen.',
     'hero.apps': 'Unsere Apps ansehen',
     'hero.studio': 'Wie wir bauen',
@@ -96,8 +95,7 @@
     'hero.apps.skye': 'Astrologie-Begleiterin',
 
     'apps.badge': 'Unsere Apps',
-    'apps.title': 'Apps, die wir bauen, veröffentlichen und selbst täglich nutzen',
-    'apps.desc': 'Jede davon wird von uns durchgängig gestaltet, entwickelt und betreut. Bisher drei Apps, weitere folgen.',
+    'apps.title': 'Apps, die wir bauen und selbst täglich nutzen',
     'products.tact.tagline': 'Jedes Mal den richtigen Ton treffen',
     'products.tact.desc': 'Tact gibt Ihren Nachrichten den perfekten Ton und macht Ihre KI-Prompts wirksamer. Privat by Design – Ihre Worte werden nie gespeichert.',
     'products.nimble.tagline': 'Dein Morgen-Coach',
