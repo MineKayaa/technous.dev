@@ -4,16 +4,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Technous</title>
+  <title>Technous · Independent app studio</title>
   <link rel="icon" type="image/png" href="assets/images/technous.png">
   <link rel="apple-touch-icon" href="assets/images/technous.png">
 
   <!-- SEO & Social Media -->
-  <meta name="description" content="Software crafted end-to-end. Building resilient digital products.">
+  <meta name="description" content="Technous is an independent app studio. We make Nimble, your morning coach, Tact, which helps you say it right, and Skye, your cosmic girl.">
   <meta name="theme-color" content="#f6f7f9" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#0b0e15" media="(prefers-color-scheme: dark)">
-  <meta property="og:title" content="Technous">
-  <meta property="og:description" content="Software crafted end-to-end. Building resilient digital products.">
+  <meta property="og:title" content="Technous · Independent app studio">
+  <meta property="og:description" content="Technous is an independent app studio. We make Nimble, your morning coach, Tact, which helps you say it right, and Skye, your cosmic girl.">
   <meta property="og:image" content="https://technous.dev/assets/images/technous.png">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
@@ -32,6 +32,7 @@
   {
     "@context": "https://schema.org",
     "@type": "Organization",
+    "name": "Technous",
     "url": "https://technous.dev",
     "logo": "https://technous.dev/assets/images/technous.png"
   }
@@ -47,10 +48,9 @@
         </div> Technous
       </a>
       <ul class="nav-links">
-        <li><a href="#products" data-i18n="nav.products">Products</a></li>
-        <li><a href="#process" data-i18n="nav.approach">Approach</a></li>
-        <li><a href="#industries" data-i18n="nav.industries">Industries</a></li>
-        <li><a href="#services" data-i18n="nav.services">Services</a></li>
+        <li><a href="#apps" data-i18n="nav.apps">Apps</a></li>
+        <li><a href="#studio" data-i18n="nav.studio">Studio</a></li>
+        <li><a href="#work" data-i18n="nav.work">Work with us</a></li>
         <li class="mobile-only">
           <div class="lang-options" role="radiogroup" aria-label="Language">
             <button type="button" role="radio" aria-checked="false" data-lang="en">EN</button>
@@ -58,8 +58,7 @@
             <button type="button" role="radio" aria-checked="false" data-lang="de">DE</button>
           </div>
         </li>
-        <li class="mobile-only"><a class="button secondary" href="contact.html" data-i18n="nav.contact">Contact</a></li>
-        <li class="mobile-only"><a class="button primary" href="contact.html" data-i18n="nav.start">Start a project</a></li>
+        <li class="mobile-only"><a class="button primary" href="contact.html" data-i18n="nav.contact">Contact</a></li>
       </ul>
       <div class="nav-actions">
         <div class="lang-switch">
@@ -84,8 +83,7 @@
             <path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a7 7 0 1 0 10.5 10.5z"></path>
           </svg>
         </button>
-        <a class="button secondary" href="contact.html" data-i18n="nav.contact">Contact</a>
-        <a class="button muted-dark" href="contact.html" data-i18n="nav.start">Start a project</a>
+        <a class="button muted-dark" href="contact.html" data-i18n="nav.contact">Contact</a>
       </div>
       <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
         <span></span>
@@ -115,78 +113,49 @@
         <path class="orbit-arc" d="M 505 -10 C 585 190, 470 420, 230 590" opacity="0.7"></path>
       </svg>
       <div class="hero-inner">
-        <h1 data-i18n="hero.title" data-i18n-html>Building resilient <em>digital products.</em></h1>
-        <p class="hero-description" data-i18n="hero.desc">Technous is a small, senior engineering team. We design, build, and run software
-          that feels modern, reliable, and truly yours, combining strong engineering with thoughtful product sense.</p>
+        <h1 data-i18n="hero.title" data-i18n-html>Small apps, <em>made with care.</em></h1>
+        <p class="hero-description" data-i18n="hero.desc">Technous is an independent app studio. We design, build, and run our own apps:
+          focused tools that do one thing well, respect your privacy, and feel good to use every day.</p>
         <div class="cta-buttons">
-          <a class="button muted-dark large" href="contact.html"><span data-i18n="nav.start">Start a project</span>
+          <a class="button muted-dark large" href="#apps"><span data-i18n="hero.apps">See our apps</span>
             <svg class="arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"
               stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <path d="M3 8h10M9 4l4 4-4 4"></path>
             </svg>
           </a>
-          <a class="button secondary large" href="#services" data-i18n="hero.explore">Explore services</a>
-          <div class="products-cta-row">
-            <a class="button accent large" href="#products" data-i18n="hero.products">See our products</a>
-          </div>
+          <a class="button secondary large" href="#studio" data-i18n="hero.studio">How we build</a>
         </div>
+        <ul class="hero-apps" aria-label="Our apps">
+          <li>
+            <a href="https://nimbleapp.co" target="_blank" rel="noopener">
+              <img src="assets/images/nimble-logo.png" alt="" width="28" height="28">
+              <span><strong>Nimble</strong> <span data-i18n="hero.apps.nimble">Alarm clock</span></span>
+            </a>
+          </li>
+          <li>
+            <a href="https://tactapp.co" target="_blank" rel="noopener">
+              <img src="assets/images/tact-logo.png" alt="" width="28" height="28">
+              <span><strong>Tact</strong> <span data-i18n="hero.apps.tact">Writing assistant</span></span>
+            </a>
+          </li>
+          <li>
+            <a href="https://skyeapp.co" target="_blank" rel="noopener">
+              <img src="assets/images/skye-logo.png" alt="" width="28" height="28">
+              <span><strong>Skye</strong> <span data-i18n="hero.apps.skye">Astrology companion</span></span>
+            </a>
+          </li>
+        </ul>
       </div>
     </section>
 
-    <div class="feature-strip fade-in">
-      <div class="feature scale-in stagger-1">
-        <div class="icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"
-            stroke-linejoin="round" aria-hidden="true">
-            <circle cx="9" cy="8" r="3.2"></circle>
-            <path d="M3.5 19c.6-3.2 2.8-5 5.5-5s4.9 1.8 5.5 5"></path>
-            <path d="M16 6.5a2.6 2.6 0 0 1 0 5.2M17.5 13.5c1.8.5 3 2 3.5 4.5"></path>
-          </svg>
-        </div>
-        <h3 data-i18n="feat.4.title">Senior, end to end</h3>
-        <p data-i18n="feat.4.desc">One small team owns discovery, design, build, and launch. No hand-offs, no surprises.</p>
-      </div>
-      <div class="feature scale-in stagger-2">
-        <div class="icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"
-            stroke-linejoin="round" aria-hidden="true">
-            <path d="M13 3 5 13.5h6L10.5 21 19 10.5h-6L13 3z"></path>
-          </svg>
-        </div>
-        <h3 data-i18n="feat.1.title">Rapid delivery</h3>
-        <p data-i18n="feat.1.desc">Working software in weeks, shipped in tight cycles with QA built in from the start.</p>
-      </div>
-      <div class="feature scale-in stagger-3">
-        <div class="icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"
-            stroke-linejoin="round" aria-hidden="true">
-            <path d="M12 3 4.5 6v5.5c0 4.6 3.2 8.2 7.5 9.5 4.3-1.3 7.5-4.9 7.5-9.5V6L12 3z"></path>
-            <path d="m9.5 12 1.8 1.8 3.4-3.6"></path>
-          </svg>
-        </div>
-        <h3 data-i18n="feat.2.title">Security by default</h3>
-        <p data-i18n="feat.2.desc">Sensible defaults, least privilege, and reviews at every step so you don't have to think about it.</p>
-      </div>
-      <div class="feature scale-in stagger-4">
-        <div class="icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"
-            stroke-linejoin="round" aria-hidden="true">
-            <path d="M4 19h16M4 19V9M9 19V5M14 19v-8M19 19V3"></path>
-          </svg>
-        </div>
-        <h3 data-i18n="feat.3.title">Built to grow</h3>
-        <p data-i18n="feat.3.desc">Architecture that scales with your product instead of against it, from first user to millions.</p>
-      </div>
-    </div>
-
-    <section id="products" class="section fade-in">
+    <section id="apps" class="section fade-in">
       <div class="section-header">
         <div>
-          <div class="badge" data-i18n="products.badge">Products</div>
-          <h2 data-i18n="products.title">Products close to our hearts</h2>
+          <div class="badge" data-i18n="apps.badge">Our apps</div>
+          <h2 data-i18n="apps.title">Apps we build, ship, and use every day</h2>
         </div>
-        <p class="muted" data-i18n="products.desc">We ship our own apps with the same care we bring to client work. It keeps us honest about
-          what it takes to run a product day to day.</p>
+        <p class="muted" data-i18n="apps.desc">Each one is designed, engineered, and supported by us, end to end. Three apps so far,
+          with more on the way.</p>
       </div>
       <div class="product-grid">
         <article class="product scale-in stagger-1">
@@ -254,7 +223,7 @@
             <img src="assets/images/nimble-logo.png" alt="Nimble logo" width="48" height="48">
             <div>
               <h3>Nimble</h3>
-              <span data-i18n="products.nimble.tagline">The alarm that actually gets you out of bed</span>
+              <span data-i18n="products.nimble.tagline">Your morning coach</span>
             </div>
           </div>
           <p data-i18n="products.nimble.desc">Pick one of four characters, Mira, Arden, Vexo, or Kai, and wake up to their voice with a fresh message
@@ -281,138 +250,119 @@
             </span>
           </div>
         </article>
+        <article class="product scale-in stagger-3">
+          <div class="product-head">
+            <img src="assets/images/skye-logo.png" alt="Skye logo" width="48" height="48">
+            <div>
+              <h3>Skye</h3>
+              <span data-i18n="products.skye.tagline">Your cosmic girl</span>
+            </div>
+          </div>
+          <p data-i18n="products.skye.desc">Chat with Skye about your birth chart, today's sky, and tarot, anytime. She reads your stars and
+            talks with you like a friend.</p>
+          <div class="store-badges">
+            <a class="store-btn" href="https://skyeapp.co" target="_blank" rel="noopener" aria-label="Visit skyeapp.co">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="2" y1="12" x2="22" y2="12"></line>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+                </path>
+              </svg>
+              <span class="store-btn-label"><strong>skyeapp.co</strong></span>
+            </a>
+            <span class="store-btn disabled" aria-label="Skye on the App Store, coming soon">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path
+                  d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z" />
+              </svg>
+              <span class="store-btn-label"><strong>App Store</strong></span>
+              <span class="soon-tag" data-i18n="products.soon">Soon</span>
+            </span>
+            <span class="store-btn disabled" aria-label="Skye on Google Play, coming soon">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path
+                  d="M3.6 2.3c-.36.38-.6.96-.6 1.72v15.96c0 .76.24 1.34.6 1.72l.06.05L12.5 12 3.66 2.25l-.06.05zM16.34 15.83l-2.96-2.96 2.96-2.96 3.5 1.99c1 .57 1 1.51 0 2.08l-3.5 1.85zM12.5 12l-9-9.7L14.59 8.5 12.5 12zm0 0L14.59 15.5 3.5 21.7 12.5 12z" />
+              </svg>
+              <span class="store-btn-label"><strong>Google Play</strong></span>
+              <span class="soon-tag" data-i18n="products.soon">Soon</span>
+            </span>
+          </div>
+        </article>
       </div>
     </section>
 
-    <section id="process" class="section fade-in">
-      <div class="process-split">
-        <div class="process-text">
-          <div class="badge" data-i18n="approach.badge">Approach</div>
-          <h2 data-i18n="approach.title">A workflow that adapts to your needs</h2>
-          <p class="muted" data-i18n="approach.desc">Clear checkpoints, transparent communication, and documentation that makes collaboration
-            effortless.</p>
-          <div class="process-image">
-            <img src="assets/images/software-engineer.svg" alt="" loading="lazy">
-          </div>
-        </div>
-        <div class="process-timeline">
-          <div class="timeline-step scale-in stagger-1">
-            <span class="timeline-number">1</span>
-            <div class="timeline-marker"></div>
-            <div class="timeline-content">
-              <h4 data-i18n="approach.1.title">Shape</h4>
-              <p data-i18n="approach.1.desc">Together we define what we're building and how success looks, without overcomplicating it.</p>
-            </div>
-          </div>
-          <div class="timeline-step scale-in stagger-2">
-            <span class="timeline-number">2</span>
-            <div class="timeline-marker"></div>
-            <div class="timeline-content">
-              <h4 data-i18n="approach.2.title">Build</h4>
-              <p data-i18n="approach.2.desc">Design and development in tight, focused cycles with QA baked into every step.</p>
-            </div>
-          </div>
-          <div class="timeline-step scale-in stagger-3">
-            <span class="timeline-number">3</span>
-            <div class="timeline-marker"></div>
-            <div class="timeline-content">
-              <h4 data-i18n="approach.3.title">Launch</h4>
-              <p data-i18n="approach.3.desc">A smooth rollout with checklists, monitoring, and support during the critical phase.</p>
-            </div>
-          </div>
-          <div class="timeline-step scale-in stagger-4">
-            <span class="timeline-number">4</span>
-            <div class="timeline-marker"></div>
-            <div class="timeline-content">
-              <h4 data-i18n="approach.4.title">Optimize</h4>
-              <p data-i18n="approach.4.desc">Refining the product with real data, experiments, and performance improvements.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="industries" class="section fade-in">
+    <section id="studio" class="section fade-in">
       <div class="section-header">
         <div>
-          <div class="badge" data-i18n="industries.badge">Industries</div>
-          <h2 data-i18n="industries.title">Expertise that travels well</h2>
+          <div class="badge" data-i18n="studio.badge">Studio</div>
+          <h2 data-i18n="studio.title">How we make apps</h2>
         </div>
-        <p class="muted" data-i18n="industries.desc">We help teams in SaaS, AI, industrial IT, and other fast-moving industries build dependable
-          products without slowing down.</p>
+        <p class="muted" data-i18n="studio.desc">We're a small, senior team building products we want to use ourselves. A few rules we
+          don't bend:</p>
       </div>
-      <div class="industry-grid">
-        <article class="card scale-in stagger-1">
-          <h4 data-i18n="industries.4.title">Industrial IT</h4>
-          <p data-i18n="industries.4.desc">Specialized systems for manufacturing, logistics, and industrial monitoring and control.</p>
-        </article>
-        <article class="card scale-in stagger-2">
-          <h4 data-i18n="industries.2.title">AI &amp; automation</h4>
-          <p data-i18n="industries.2.desc">Human-centered AI tools, LLM workflows, and reliable evaluation setups.</p>
-        </article>
-        <article class="card scale-in stagger-3">
-          <h4 data-i18n="industries.1.title">SaaS &amp; platforms</h4>
-          <p data-i18n="industries.1.desc">Multi-tenant systems, usage analytics, and billing that scales naturally.</p>
-        </article>
-        <article class="card scale-in stagger-4">
-          <h4 data-i18n="industries.3.title">Web &amp; mobile</h4>
-          <p data-i18n="industries.3.desc">Clear, consistent web and mobile experiences with strong data practices and smooth performance.</p>
-        </article>
+      <div class="principles">
+      <div class="feature scale-in stagger-1">
+        <div class="icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"
+            stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="8.5"></circle>
+            <circle cx="12" cy="12" r="3.2"></circle>
+          </svg>
+        </div>
+        <h3 data-i18n="studio.1.title">One job, done well</h3>
+        <p data-i18n="studio.1.desc">Every app starts from one everyday problem and stays focused on it. No feature bloat, no clutter.</p>
+      </div>
+      <div class="feature scale-in stagger-2">
+        <div class="icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"
+            stroke-linejoin="round" aria-hidden="true">
+            <path d="M12 3 4.5 6v5.5c0 4.6 3.2 8.2 7.5 9.5 4.3-1.3 7.5-4.9 7.5-9.5V6L12 3z"></path>
+            <path d="m9.5 12 1.8 1.8 3.4-3.6"></path>
+          </svg>
+        </div>
+        <h3 data-i18n="studio.2.title">Private by design</h3>
+        <p data-i18n="studio.2.desc">We collect only what an app needs to work, and we say plainly what that is.</p>
+      </div>
+      <div class="feature scale-in stagger-3">
+        <div class="icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"
+            stroke-linejoin="round" aria-hidden="true">
+            <path d="M12 3v3M12 18v3M3 12h3M18 12h3"></path>
+            <path d="M12 8.5 13.2 10.8 15.5 12 13.2 13.2 12 15.5 10.8 13.2 8.5 12 10.8 10.8z"></path>
+          </svg>
+        </div>
+        <h3 data-i18n="studio.3.title">Sweat the details</h3>
+        <p data-i18n="studio.3.desc">Motion, sound, and words tuned until they feel right, on every screen and in every language.</p>
+      </div>
+      <div class="feature scale-in stagger-4">
+        <div class="icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"
+            stroke-linejoin="round" aria-hidden="true">
+            <path d="M20 11a8 8 0 1 0-2.3 5.7"></path>
+            <path d="M20 5v6h-6"></path>
+          </svg>
+        </div>
+        <h3 data-i18n="studio.4.title">Here for the long run</h3>
+        <p data-i18n="studio.4.desc">We run what we ship. Updates, support, and fixes keep coming long after launch day.</p>
+      </div>
       </div>
     </section>
 
-    <section id="services" class="section fade-in">
-      <div class="services-split">
-        <div class="services-image">
-          <img src="assets/images/completed.svg" alt="" loading="lazy">
-        </div>
-        <div class="services-text">
-          <div class="badge" data-i18n="services.badge">Services</div>
-          <h2 data-i18n="services.title">Software crafted end-to-end</h2>
-          <p class="muted" data-i18n="services.desc">From early concept to full-scale launch, Technous blends creativity with solid engineering so
-            your product stays sharp as it grows.</p>
-        </div>
-      </div>
-      <div class="grid">
-        <article class="card scale-in stagger-1">
-          <div class="icon-circle"><img src="assets/icons/network-wired.svg" alt="" width="22" height="22"></div>
-          <h3 data-i18n="services.1.title">Product engineering</h3>
-          <p data-i18n="services.1.desc">Polished, fast, and reliable web or mobile experiences with clean code and thoughtful UX.</p>
-        </article>
-        <article class="card scale-in stagger-2">
-          <div class="icon-circle"><img src="assets/icons/chart-network.svg" alt="" width="22" height="22"></div>
-          <h3 data-i18n="services.2.title">Product discovery</h3>
-          <p data-i18n="services.2.desc">Clarity early, with research, wireframes, and quick prototypes that validate the right direction.</p>
-        </article>
-        <article class="card scale-in stagger-3">
-          <div class="icon-circle"><img src="assets/icons/cloud.svg" alt="" width="22" height="22"></div>
-          <h3 data-i18n="services.3.title">Cloud &amp; DevOps</h3>
-          <p data-i18n="services.3.desc">From infrastructure-as-code to monitoring, your system stays stable, observable, and easy to deploy.</p>
-        </article>
-        <article class="card scale-in stagger-4">
-          <div class="icon-circle"><img src="assets/icons/code-branch.svg" alt="" width="22" height="22"></div>
-          <h3 data-i18n="services.4.title">Team augmentation</h3>
-          <p data-i18n="services.4.desc">An experienced developer who integrates smoothly with your workflow and ships real progress from day
-            one.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="cta-band fade-in">
+    <section id="work" class="cta-band fade-in">
       <div class="cta-inner">
         <div>
-          <div class="badge" data-i18n="cta.badge">Let's build</div>
-          <h2 data-i18n="cta.title">Bring your next release to Technous</h2>
-          <p class="muted" data-i18n="cta.desc">Share your roadmap and we'll turn it into a clear plan with milestones and a dedicated
-            execution approach.</p>
+          <div class="badge" data-i18n="work.badge">Work with us</div>
+          <h2 data-i18n="work.title">We also partner on select projects</h2>
+          <p class="muted" data-i18n="work.desc">Now and then we team up with companies building something we believe in, bringing the
+            same product engineering, discovery, and cloud experience behind our own apps.</p>
           <div class="cta-buttons">
-            <a class="button primary large" href="contact.html"><span data-i18n="cta.reach">Reach us now</span>
+            <a class="button primary large" href="contact.html"><span data-i18n="work.reach">Tell us about it</span>
               <svg class="arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"
                 stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M3 8h10M9 4l4 4-4 4"></path>
               </svg>
             </a>
-            <a class="button secondary large" href="terms.html" data-i18n="cta.terms">Review our terms</a>
           </div>
         </div>
         <div class="cta-image">
