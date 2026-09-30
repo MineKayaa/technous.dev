@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact · Technous</title>
-  <meta name="description" content="Tell us about your next release. Technous responds within one business day.">
+  <meta name="description" content="Get in touch with Technous about Nimble, Tact, Skye, press, or partnerships. We reply within one business day.">
   <meta name="theme-color" content="#f6f7f9" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#0b0e15" media="(prefers-color-scheme: dark)">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -29,10 +29,9 @@
         </div> Technous
       </a>
       <ul class="nav-links">
-        <li><a href="index.html#products" data-i18n="nav.products">Products</a></li>
-        <li><a href="index.html#process" data-i18n="nav.approach">Approach</a></li>
-        <li><a href="index.html#industries" data-i18n="nav.industries">Industries</a></li>
-        <li><a href="index.html#services" data-i18n="nav.services">Services</a></li>
+        <li><a href="index.html#apps" data-i18n="nav.apps">Apps</a></li>
+        <li><a href="index.html#studio" data-i18n="nav.studio">Studio</a></li>
+        <li><a href="index.html#work" data-i18n="nav.work">Work with us</a></li>
         <li class="mobile-only">
           <div class="lang-options" role="radiogroup" aria-label="Language">
             <button type="button" role="radio" aria-checked="false" data-lang="en">EN</button>
@@ -40,8 +39,7 @@
             <button type="button" role="radio" aria-checked="false" data-lang="de">DE</button>
           </div>
         </li>
-        <li class="mobile-only"><a class="button secondary" href="contact.html" data-i18n="nav.contact">Contact</a></li>
-        <li class="mobile-only"><a class="button primary" href="contact.html" data-i18n="nav.start">Start a project</a></li>
+        <li class="mobile-only"><a class="button primary" href="contact.html" data-i18n="nav.contact">Contact</a></li>
       </ul>
       <div class="nav-actions">
         <div class="lang-switch">
@@ -66,8 +64,7 @@
             <path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a7 7 0 1 0 10.5 10.5z"></path>
           </svg>
         </button>
-        <a class="button secondary" href="contact.html" data-i18n="nav.contact">Contact</a>
-        <a class="button muted-dark" href="contact.html" data-i18n="nav.start">Start a project</a>
+        <a class="button muted-dark" href="contact.html" data-i18n="nav.contact">Contact</a>
       </div>
       <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
         <span></span>
@@ -81,9 +78,9 @@
     <div class="contact-header">
       <div class="contact-header-text">
         <div class="badge" data-i18n="contact.badge">Contact</div>
-        <h1 data-i18n="contact.title">Let's talk about your next release</h1>
-        <p class="muted" data-i18n="contact.desc">Share your goals, timeline, and the challenges you want to solve. We respond within one
-          business day.</p>
+        <h1 data-i18n="contact.title">Say hello</h1>
+        <p class="muted" data-i18n="contact.desc">Questions about our apps, press, partnerships, or a project in mind. Write to us
+          and we'll reply within one business day.</p>
       </div>
       <div class="contact-header-image">
         <img src="assets/images/contact.svg" alt="" fetchpriority="high">
@@ -92,24 +89,35 @@
 
     <div class="contact-grid">
       <article class="card form-card scale-in stagger-1">
-        <h3 data-i18n="contact.form.title">Project inquiry</h3>
+        <h3 data-i18n="contact.form.title">Send us a message</h3>
         <form id="contact-form">
+          <label>
+            <span data-i18n="contact.form.topic">What's it about?</span>
+            <select class="input" name="topic" id="topic">
+              <option value="Nimble support" data-i18n="contact.topic.nimble">Nimble support</option>
+              <option value="Tact support" data-i18n="contact.topic.tact">Tact support</option>
+              <option value="Skye support" data-i18n="contact.topic.skye">Skye support</option>
+              <option value="Press" data-i18n="contact.topic.press">Press</option>
+              <option value="Partnership or project" data-i18n="contact.topic.work">Partnership or project</option>
+              <option value="Something else" data-i18n="contact.topic.other">Something else</option>
+            </select>
+          </label>
           <label>
             <span data-i18n="contact.form.name">Full name</span>
             <input class="input" type="text" name="name" id="name" placeholder="Thomas Anderson" required>
           </label>
           <label>
-            <span data-i18n="contact.form.email">Work email</span>
-            <input class="input" type="email" name="email" id="email" placeholder="thomas@company.com" required>
+            <span data-i18n="contact.form.email">Email</span>
+            <input class="input" type="email" name="email" id="email" placeholder="thomas@example.com" required>
           </label>
           <label>
-            <span data-i18n="contact.form.company">Company</span>
+            <span data-i18n="contact.form.company">Company (optional)</span>
             <input class="input" type="text" name="company" id="company" placeholder="Company name" data-i18n-placeholder="contact.form.company">
           </label>
           <label>
             <span data-i18n="contact.form.message">How can we help?</span>
             <textarea class="input" name="message" id="message"
-              placeholder="Product build, platform modernization, or team augmentation details" data-i18n-placeholder="contact.form.message"></textarea>
+              placeholder="Tell us what's on your mind" data-i18n-placeholder="contact.form.message"></textarea>
           </label>
           <button class="button primary large" type="submit" data-i18n="contact.form.send">Send message</button>
           <div id="form-status" hidden></div>
@@ -118,18 +126,18 @@
 
       <article class="card contact-info-card scale-in stagger-2">
         <h3 data-i18n="contact.details.title">Quick details</h3>
-        <p class="muted" data-i18n="contact.details.desc">Prefer to email us directly? Reach out and we'll route your note to the right product lead.</p>
+        <p class="muted" data-i18n="contact.details.desc">Prefer email? Write to us directly and we'll pass your note to the right person.</p>
         <div class="pill-group">
           <a class="pill" href="mailto:hello@technous.dev"><img src="assets/icons/mail.svg" alt="" width="14"
               height="14"> hello@technous.dev</a>
           <span class="pill"><img src="assets/icons/mobile-signal.svg" width="14" height="14" alt=""> <span data-i18n="contact.details.remote">Remote-first, GMT core hours</span></span>
           <span class="pill"><img src="assets/icons/arrow-rotate-right-24.svg" width="14" height="14" alt=""> <span data-i18n="contact.details.response">Response within 1 business day</span></span>
         </div>
-        <h4 data-i18n="contact.include.title">What to include</h4>
+        <h4 data-i18n="contact.include.title">Helps us reply faster</h4>
         <ul>
-          <li data-i18n="contact.include.1">Project goals and deadlines</li>
-          <li data-i18n="contact.include.2">Key platforms (web, mobile, cloud)</li>
-          <li data-i18n="contact.include.3">Budget guardrails and team size</li>
+          <li data-i18n="contact.include.1">For support: the app, your device, and what happened</li>
+          <li data-i18n="contact.include.2">For press: your outlet and deadline</li>
+          <li data-i18n="contact.include.3">For projects: goals, timeline, and budget</li>
         </ul>
       </article>
     </div>
@@ -161,13 +169,15 @@
     document.getElementById('contact-form').addEventListener('submit', function (event) {
       event.preventDefault();
 
+      var topic = document.getElementById('topic').value;
       var name = document.getElementById('name').value;
       var email = document.getElementById('email').value;
       var company = document.getElementById('company').value;
       var message = document.getElementById('message').value;
 
-      var subject = encodeURIComponent('New Contact Form Submission from ' + name);
+      var subject = encodeURIComponent(topic + ' · ' + name);
       var body = encodeURIComponent(
+        'Topic: ' + topic + '\n' +
         'Name: ' + name + '\n' +
         'Email: ' + email + '\n' +
         'Company: ' + (company || 'Not provided') + '\n\n' +
