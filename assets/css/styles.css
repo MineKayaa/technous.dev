@@ -831,10 +831,6 @@ nav.scrolled {
   gap: 20px;
 }
 
-.product-nimble {
-  order: -1;
-}
-
 .product {
   border: 1px solid var(--line);
   border-radius: var(--radius);
